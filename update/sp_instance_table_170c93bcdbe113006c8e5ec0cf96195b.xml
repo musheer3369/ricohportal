@@ -18,7 +18,7 @@
         <roles/>
         <short_description>My Incidents</short_description>
         <size>md</size>
-        <sp_column display_value="2">c4eb13bcdbe113006c8e5ec0cf96199b</sp_column>
+        <sp_column display_value="1">c4eb13bcdbe113006c8e5ec0cf96199b</sp_column>
         <sp_page/>
         <sp_widget display_value="RSP Data Table from Instance">f287ffcadb3013006c8e5ec0cf961978</sp_widget>
         <sys_class_name>sp_instance_table</sys_class_name>
