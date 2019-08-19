@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>li{
+text-align:left;
+  color:black;
+}
+div{
+	text-align:center;
+  color:#ffffff;
+}
+.col-container {
+  display: flex;
+  width: 100%;
+}
+.col {
+  flex: 1;
+  padding: 16px;
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>rsp_managed_services</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+        <name>RSP Managed Services</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-08-16 08:08:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a1162a6ddb9b334063599017db961951</sys_id>
+        <sys_mod_count>56</sys_mod_count>
+        <sys_name>RSP Managed Services</sys_name>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>sp_widget_a1162a6ddb9b334063599017db961951</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-08-19 10:13:54</sys_updated_on>
+        <template><![CDATA[<div class="row text-center" >
+  <div class="col-md-2" >
+    	<div  style="background-image:url(it_services_bkg.png);min-height:275px">
+         <div class="row">
+               <h4>
+              IT Essentials
+            </h4>
+            </div>
+            <div class="row" >
+               <img src="it_essentials.png" width="50%" height="50%"/>
+            </div>
+             <div class="row ">
+                <small>
+              Essential to your business.<br>
+              Essential to your success.<br>
+              Everything you need,managed<br> by a partner you trust.
+            </small>
+            </div>
+   
+   		 </div>
+           
+   <ul>
+     <li>Server Management</li>
+     <li>Storage Management</li>
+     <li>Virtualization Management</li>
+     <li>Network Management</li>
+     <li>Firewall Management</li>
+     <li>Wireless Management</li>
+     <li>Workstation Management</li>
+     <li>Monitoring and Alerting</li>
+     <li>Helpdesk and Support</li>
+     <li>Engineering Services</li>
+    </ul>
+  
+  </div>
+  <div class="col-md-2"  >
+    <div   style="background-image:url(hosting_cloud_bkg.png);min-height:275px" >
+          <div class="row">
+           <h4>
+         Hosting &amp; Cloud
+        </h4>
+        </div>
+        <div class="row">
+          <img src="hosting_cloud.png" width="60%" height="60%"/>
+        </div>
+
+       <div class="row">
+          <small>
+         Move to the cloud with confidence.<br>Custom,cloud-based solutions tailored<br> to your business needs.
+          </small>
+        </div>
+        </div>
+      <ul>
+        <li>cloudSHIFT Hosted Server</li>
+        <li>cloudSHIFT Hosted Desktop</li>
+        <li>Co-Location Services</li>
+        <li>Load Balancing</li>
+        <li>Secure Remote Access</li>
+        <li>Internet and VPN Services</li>
+        <li>Managed Circuits</li>
+        <li>Microsoft 365 / Office365 </li>
+        <li>Microsoft Azure</li>
+        <li>Amazon AWS</li>
+        <li>IMB iSeries AS/400</li>
+
+      </ul>
+  
+
+    
+  </div>
+  
+  <div class="col-md-2" >
+    
+    <div   style="background-image:url(websites_apps_bkg.png);min-height:275px">
+      
+      		<div class="row">
+      <h4>
+    Websites &amp; Apps  
+    </h4>
+    </div>
+    <div class="row">
+      <img src="websites_apps.png" width="60%" height="60%"/>
+    </div>
+    <div class="row">
+    <small>  Build your brand and extend your reach.<br>
+      Collaborate and communicate with<br> employees and customers online.</small>
+    </div>
+    
+      
+    </div>
+    <ul>
+           <li> Hosted Exchange</li>
+      <li>Hosted VoIP</li>
+      <li>Hosted Fax</li>
+      <li>Hosted SFTP</li>
+      <li>Email Protection &amp; Continuity</li>
+      <li>Email Archiving Services</li>
+      <li>DNS and Domain Services</li>
+      <li>SQL Management</li>
+      <li>Application Development</li>
+      <li>Application Management</li>
+
+    </ul>
+    
+  </div>
+  
+  <div class="col-md-2" >
+   
+    	<div   style="background-image:url(security_complaince_bkg.png);min-height:275px">
+         <div class="row">
+       <h4>
+    Security &amp; Compliance  
+    </h4>
+    </div>
+    <div class="row">
+       <img src="security_complaince.png" width="60%" height="60%"/>
+    </div>
+    <div class="row">
+     <small> Protect your systems and data.<br>
+      Protect your company.<br>
+      Identify and REMEDIATE vulnerabilities.<br>
+      Make your data more secure.</small>
+    </div>
+   
+    </div>
+    <ul>
+      <li>OS Patching</li>
+        <li>Antivirus / Anti Malware</li>
+        <li>Managed Server Backup</li>
+        <li>Managed Workstation Backup &amp; Encryption</li>
+        <li>Identity Access Management</li>
+        <li>Mobile Device Management</li>
+        <li>Disaster Recovery as a Service (DRaaS)</li>
+        <li>Penetration Testing</li>
+        <li>Risk/Vulnerability Assessment</li>
+
+    </ul>
+   
+  </div>
+  
+  <div class="col-md-2" >
+   <div style="background-image:url(advisory_services_bkg.png);min-height:275px" >
+        <div class="row">
+         <h4>
+      Advisory Services  
+      </h4>
+      </div>
+      <div class="row">
+        <img src="advisory_services.png" width="60%" height="60%"/>
+      </div>
+      <div class="row">
+     <small>   Meet the experts.<br>
+        Get IT right from the start.</small>
+      </div>
+     
+    </div>
+   
+    <ul>
+     <li> Ongoing Account Mgmt.</li>
+<li>Brainstorming &amp; Research</li>
+<li>Strategy &amp; Planning</li>
+<li>Project Preparation</li>
+<li>Technology Assessments</li>
+<li>Technology Roadmap</li>
+<li>Trusted Advisor &amp; Advocate</li>
+
+    </ul>
+    
+    
+  </div>
+  
+</div>]]></template>
+    </sp_widget>
+</record_update>
