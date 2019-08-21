@@ -11,21 +11,21 @@
         <short_description/>
         <size>md</size>
         <sp_column display_value="1">707be11adb5b674063599017db96198a</sp_column>
-        <sp_widget display_value="mindSHIFT Tabbed Table">a17ae444db6eee406d7070e21f961991</sp_widget>
+        <sp_widget display_value="RSP Tabbed Table">7e064ff2dbd3fb4063599017db9619d3</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
-        <sys_created_on>2019-01-31 15:39:47</sys_created_on>
+        <sys_created_on>2019-08-20 07:42:40</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>545ced1adb5b674063599017db9619de</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_id>07a68f36dbd3fb4063599017db9619fc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
-        <sys_update_name>sp_instance_545ced1adb5b674063599017db9619de</sys_update_name>
+        <sys_update_name>sp_instance_07a68f36dbd3fb4063599017db9619fc</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-01-31 15:47:45</sys_updated_on>
+        <sys_updated_on>2019-08-21 05:22:58</sys_updated_on>
         <title/>
         <url/>
         <widget_parameters><![CDATA[{
@@ -42,8 +42,8 @@
 		"displayValue": "name,company,model_id,os,serial_number,warranty_expiration"
 	},
 	"table_1_filter": {
-		"value": "sys_class_name=cmdb_ci_computer^companyDYNAMIC20115913db5eae406d7070e21f961986^install_status!=7",
-		"displayValue": "sys_class_name=cmdb_ci_computer^companyDYNAMIC20115913db5eae406d7070e21f961986^install_status!=7"
+		"value": "sys_class_name=cmdb_ci_computer^install_status!=7",
+		"displayValue": "sys_class_name=cmdb_ci_computer^install_status!=7"
 	},
 	"table_2": {
 		"value": "cmdb_ci_server",
@@ -59,7 +59,7 @@
 	},
 	"table_2_filter": {
 		"value": "GOTOsys_class_nameLIKEserver^companyDYNAMIC20115913db5eae406d7070e21f961986^install_status!=7",
-		"displayValue": "GOTOsys_class_nameLIKEserver^companyDYNAMIC20115913db5eae406d7070e21f961986^install_status!=7"
+		"displayValue": "GOTOsys_class_nameLIKEserver^install_status!=7"
 	},
 	"table_3": {
 		"value": "cmdb_ci_netgear",
@@ -74,8 +74,8 @@
 		"displayValue": "name,company,model_id,device_type,serial_number,warranty_expiration"
 	},
 	"table_3_filter": {
-		"value": "GOTOcompanyDYNAMIC20115913db5eae406d7070e21f961986^install_status!=7",
-		"displayValue": "GOTOcompanyDYNAMIC20115913db5eae406d7070e21f961986^install_status!=7"
+		"value": "GOTOinstall_status!=7",
+		"displayValue": "GOTOinstall_status!=7"
 	},
 	"table_4": {
 		"value": "",
@@ -95,5 +95,5 @@
 	}
 }]]></widget_parameters>
     </sp_instance>
-    <sys_translated_text action="delete_multiple" query="documentkey=545ced1adb5b674063599017db9619de"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=07a68f36dbd3fb4063599017db9619fc"/>
 </record_update>

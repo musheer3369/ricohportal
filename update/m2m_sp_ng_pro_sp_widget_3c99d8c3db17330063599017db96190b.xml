@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_ng_pro_sp_widget">
+    <m2m_sp_ng_pro_sp_widget action="INSERT_OR_UPDATE">
+        <sp_angular_provider display_value="rpAccountService">1ad17799db6d13006c8e5ec0cf9619f6</sp_angular_provider>
+        <sp_widget display_value="Copy of RSP  Data Table">f8999c83db17330063599017db961963</sp_widget>
+        <sys_class_name>m2m_sp_ng_pro_sp_widget</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-08-20 13:44:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3c99d8c3db17330063599017db96190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>rpAccountService.Copy of RSP  Data Table</sys_name>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>m2m_sp_ng_pro_sp_widget_3c99d8c3db17330063599017db96190b</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-08-20 13:44:53</sys_updated_on>
+    </m2m_sp_ng_pro_sp_widget>
+</record_update>

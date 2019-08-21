@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
-        <category/>
+        <category>custom</category>
         <client_script><![CDATA[function ($rootScope,$scope, $location, spUtil, amb, $http,$timeout,$q, rpAccountService) {
 	var c = this;
 	
@@ -457,7 +457,7 @@ tbody tr:last-child {&#13;
         <docs/>
         <field_list>title,maximum_entries,glyph,color,sp_page,field_list,table,filter,order,order_by,order_direction</field_list>
         <has_preview>false</has_preview>
-        <id>rsp-data-table</id>
+        <id>rsp-data-table-temp</id>
         <internal>false</internal>
         <link><![CDATA[function(scope, element, attrs, ctrl){
 	var $ul, $contextMenu;
@@ -581,7 +581,7 @@ tbody tr:last-child {&#13;
 		});
 	}
 }]]></link>
-        <name>RSP  Data Table</name>
+        <name>Copy of RSP  Data Table</name>
         <option_schema>[{"name":"title","default_value":"My Incidents","label":"title","type":"string"}]</option_schema>
         <public>false</public>
         <roles>snc_external,snc_internal</roles>
@@ -671,12 +671,6 @@ tbody tr:last-child {&#13;
 
 	
 	
-		/*if (gs.getProperty("glide.security.ui.filter") == "true" || GlideTableDescriptor.get(data.table).getED().hasAttribute("glide.security.ui.filter"))
-	{
-		gr = new FilteredGlideRecord(data.table);
-		gr.applyRowSecurity();
-	}
-	else*/
 		gr = new GlideRecordSecure(data.table);
 	
 	
@@ -726,7 +720,8 @@ tbody tr:last-child {&#13;
 			
 		}
 	// filter exclude from portal
-	gr.addQuery("u_non_service_portal","false");	
+	//gr.addQuery("u_non_service_portal","false");	
+	console.log(gr.getEncodedQuery());
 	gr._query();
 
 	data.row_count = gr.getRowCount();
@@ -793,22 +788,22 @@ tbody tr:last-child {&#13;
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-04-16 05:59:55</sys_created_on>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-08-20 13:44:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>268a8e70db6113006c8e5ec0cf9619ff</sys_id>
-        <sys_mod_count>82</sys_mod_count>
-        <sys_name>RSP  Data Table</sys_name>
+        <sys_id>f8999c83db17330063599017db961963</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>Copy of RSP  Data Table</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
-        <sys_update_name>sp_widget_268a8e70db6113006c8e5ec0cf9619ff</sys_update_name>
+        <sys_update_name>sp_widget_f8999c83db17330063599017db961963</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-08-20 13:39:28</sys_updated_on>
+        <sys_updated_on>2019-08-21 04:52:24</sys_updated_on>
         <template><![CDATA[<div  class="row ricoh-panel" ng-init="c.init()">
       <widget id="breadcrumbs"></widget>
-  		<div class="col-xs-9 col-sm-8 col-md-5 col-lg-4" ng-include="'rspKeywordSearch'">         
+  		<div class="col-xs-9 col-sm-8 col-md-5 col-lg-4">         
   		</div>    
         <div class="pull-right-sm col-xs-9 col-sm-8 col-md-5 col-lg-4" >
          <select id="my-accounts" multiple>
