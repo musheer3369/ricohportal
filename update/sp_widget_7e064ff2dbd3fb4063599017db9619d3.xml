@@ -41,8 +41,11 @@
   height: auto;&#13;
   margin: auto;&#13;
   text-indent: 0;&#13;
-  border: inherit;&#13;
-  background-color: #246aa8;&#13;
+  border-style:solid;&#13;
+  border-width:1px;&#13;
+  border-color:#cf142b;&#13;
+  background-color: transparent;&#13;
+  color:#cf142b;&#13;
 &#13;
 }&#13;
 &#13;
@@ -87,7 +90,7 @@
 			hide_header: false,
 			show_keywords: true,
 			show_new: false,
-			show_title: false
+			show_title: true
 		};
 
 
@@ -111,11 +114,11 @@
 			hide_header: false,
 			show_keywords: true,
 			show_new: false,
-			show_title: false
+			show_title: true
 		};
 
 
-		data.dataTable2 = $sp.getWidget('rsp-data-table', table2Params);
+		data.dataTable2 = $sp.getWidget('rsp-data-table-temp', table2Params);
 	}
 	if (options.table_3) {
 		var grlb3 = new GlideRecordSecure(options.table_3);
@@ -135,11 +138,11 @@
 			hide_header: false,
 			show_keywords: true,
 			show_new: false,
-			show_title: false
+			show_title: true
 		};
 
 
-		data.dataTable3 = $sp.getWidget('rsp-data-table', table3Params);
+		data.dataTable3 = $sp.getWidget('rsp-data-table-temp', table3Params);
 	}
 	if (options.table_4) {
 		var grlb4 = new GlideRecordSecure(options.table_4);
@@ -159,11 +162,11 @@
 			hide_header: false,
 			show_keywords: true,
 			show_new: false,
-			show_title: false
+			show_title: true
 		};
 
 
-		data.dataTable4 = $sp.getWidget('rsp-data-table', table4Params);
+		data.dataTable4 = $sp.getWidget('rsp-data-table-temp', table4Params);
 	}
 })();
 ]]></script>
@@ -173,7 +176,7 @@
         <sys_created_on>2019-08-20 07:41:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7e064ff2dbd3fb4063599017db9619d3</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>RSP Tabbed Table</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -181,7 +184,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_7e064ff2dbd3fb4063599017db9619d3</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-08-21 05:24:35</sys_updated_on>
+        <sys_updated_on>2019-08-21 06:20:44</sys_updated_on>
         <template><![CDATA[<div id="tab-tbl" ng-controller="listController">
 <div class="carousel" id="tblCarousel">
 	<div id="" class="tab-tbl-header">
