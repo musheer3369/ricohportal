@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $location, $timeout, $window, $document, $rootScope, spUtil,spAriaUtil) {
+	var c = this;
+	$scope.selectedCatalog = c.data.catalogSelectorArr[c.data.selectedCatalogIndex];
+	$scope.changeCatalog = function (selectedCatalog) {
+		$timeout(function() {
+			if (selectedCatalog && selectedCatalog.hasOwnProperty("value")) {
+				$location.search('catalog_id', selectedCatalog.value ? selectedCatalog.value : -1);
+				$location.search('sys_id', null);
+			}
+		});
+	}
+	$scope.hideCategoryWidgetInXS = (c.options.hide_xs == 'true');
+	if (c.data.categoryId) {
+		if (!$scope.hideCategoryWidgetInXS)
+			$scope.hideCategoryWidgetInXS = true;
+	} else {
+		if ($scope.hideCategoryWidgetInXS)
+			$scope.hideCategoryWidgetInXS = false;
+	}
+	
+	spUtil.getPreference('glide.ui.accessibility', function(value) {
+		if (value == "true")
+			$scope.tabindex = 0;
+		else
+			$scope.tabindex = -1;
+	});
+	$scope.displayChildren = function($event, category) {
+		$event.stopPropagation();
+		category.showChildren = !category.showChildren;
+		if (category.showChildren) {
+			spAriaUtil.sendLiveMessage(category.title + ' '+ c.data.messages.expanded);
+		} 
+		else {
+			spAriaUtil.sendLiveMessage(category.title + ' ' +c.data.messages.collapsed);
+		}
+	};
+	
+	$scope.toggleSubCategories =  function(val) {
+		toggleSubCategories(c.data.categoriesList, val);
+	};
+	
+	function toggleSubCategories(categories, val) {
+		categories.forEach(function(category) {
+			category.showChildren = val;
+			if (category.subcategories && category.subcategories.length > 0) {
+				toggleSubCategories(category.subcategories, val);
+			}
+		});
+	}
+	
+	$scope.loadMore =  function() {
+		c.data.new_limit = c.data.limit + (c.options.number_of_categories_to_load || 15);
+		c.data.more_msg = c.data.pleaseWait;
+		c.server.update();
+	};
+	
+	$scope.categorySelected = function(category) {
+			$timeout(function() {
+				$location.search('sys_id', category.sys_id);
+				$location.search('catalog_id', c.data.catalog_id);
+				$location.search('id', c.data.page ||'rsp_sc_category');
+			});
+	};
+	
+	var listenerForBrowseCategories = $scope.$on("$sp.service_catelog.show.categories_widget", function() {
+		$scope.hideCategoryWidgetInXS = false;
+	});
+	
+	$scope.hideBrowseCategory = function () {
+		$scope.hideCategoryWidgetInXS = true;
+		$rootScope.$broadcast("$sp.service_catelog.show.items_widget");
+	}
+	
+	$scope.$on("$destroy", function() {
+		listenerForBrowseCategories();
+	});
+	
+	$scope.isTouchDevice = function() {
+		return ('ontouchstart' in $window);
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.category-widget {&#13;
+	border: 1px solid $panel-inner-border;&#13;
+  &#13;
+  .category-list {&#13;
+    .fa {&#13;
+      margin-right: 5px;&#13;
+    }&#13;
+    .l-h-1_6x {&#13;
+      line-height: 1.6em;&#13;
+    }&#13;
+    a {&#13;
+		width: 100%;&#13;
+      	vertical-align: middle;&#13;
+	    display: inline-block;&#13;
+    }&#13;
+    .list-group {&#13;
+      margin-bottom: 0;&#13;
+    }&#13;
+    .list-group-item {&#13;
+      padding: 0;&#13;
+      border: 0;&#13;
+    }&#13;
+    .group-item {&#13;
+      padding: 10px 15px;&#13;
+    }&#13;
+    .group-item-default {&#13;
+      &amp;:hover, &amp;:focus {&#13;
+        background-color: darken($panel-default-heading-bg, 2%);&#13;
+      }&#13;
+    }&#13;
+    .group-item-primary {&#13;
+      &amp;:hover, &amp;:focus {&#13;
+        border-left: 3px solid $primary !important;&#13;
+      }&#13;
+    }&#13;
+    .group-item-success {&#13;
+      &amp;:hover {&#13;
+        background-color: lighten($panel-success-heading-bg, 3%)&#13;
+      }&#13;
+    }&#13;
+    .group-item-info {&#13;
+      &amp;:hover, &amp;:focus {&#13;
+        background-color: lighten($panel-info-heading-bg, 3%)&#13;
+      }&#13;
+    }&#13;
+    .group-item-warning {&#13;
+      &amp;:hover, &amp;:focus {&#13;
+        background-color: $panel-warning-heading-bg&#13;
+      }&#13;
+    }&#13;
+    .group-item-danger {&#13;
+      &amp;:hover, &amp;:focus {&#13;
+        background-color: lighten($panel-danger-heading-bg, 3%)&#13;
+      }&#13;
+    }&#13;
+    &#13;
+    .list-bg-default {&#13;
+      background-color: $panel-default-heading-bg;&#13;
+    }&#13;
+    .list-bg-primary {&#13;
+      background-color: lighten($panel-info-heading-bg, 6%);&#13;
+    }&#13;
+    .list-bg-success {&#13;
+      background-color: lighten($panel-success-heading-bg, 6%);&#13;
+    }&#13;
+    .list-bg-info {&#13;
+      background-color: lighten($panel-info-heading-bg, 6%);&#13;
+    }&#13;
+    .list-bg-warning {&#13;
+      background-color: lighten($panel-warning-heading-bg, 3%);&#13;
+    }&#13;
+    .list-bg-danger {&#13;
+      background-color: lighten($panel-danger-heading-bg, 6%);&#13;
+    }&#13;
+  }&#13;
+}&#13;
+.panel-primary .badge {&#13;
+  background-color: $primary;&#13;
+  color: white;&#13;
+}&#13;
+.panel-default .badge {&#13;
+  background-color: $panel-default-text;&#13;
+  color: white&#13;
+}&#13;
+.panel-success .badge {&#13;
+  background-color:  $panel-success-text;&#13;
+  color: white;&#13;
+}&#13;
+.panel-info .badge {&#13;
+  background-color: $panel-info-text;&#13;
+  color: white;&#13;
+}&#13;
+.panel-warning .badge {&#13;
+  background-color: $panel-warning-text;&#13;
+  color: white;&#13;
+}&#13;
+.panel-danger .badge {&#13;
+  background-color: $panel-danger-text;&#13;
+  color: white;&#13;
+}&#13;
+.category-list .badge {&#13;
+  text-align: right;&#13;
+}&#13;
+.text-active {&#13;
+   color: $link-color;&#13;
+   border-left: 3px solid $primary&#13;
+}&#13;
+.text-default {&#13;
+   color: $text-muted;&#13;
+}&#13;
+&#13;
+.list-group-item {&#13;
+	.list-group.sub-category-list {&#13;
+  	.list-group-item span.category { // we only want nested list group items to have this indent&#13;
+    	padding-left: 15px;&#13;
+    }&#13;
+  }&#13;
+}&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data>{"options" :&#13;
+   {&#13;
+      "hide_xs" : false&#13;
+   }&#13;
+}</demo_data>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>rsp_sc_categories</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+        <name>RSP SC Categories</name>
+        <option_schema>[{"name":"hide_xs","default_value":false,"section":"Behavior","label":"Hide at XS","type":"boolean"},{"name":"omit_badges","section":"Behavior","label":"Omit badges (may impact performance for large items in categories)","type":"boolean"},{"name":"check_can_view","default_value":"true","section":"Behavior","label":"Check canView per item","type":"boolean"},{"hint":"Choose between a flattened and a nested category structure (Nested may impact performance for large items in categories)","name":"category_layout","section":"Presentation","label":"Category Layout","type":"choice","choices":[{"label":"Flat","value":"Flat"},{"label":"Nested","value":"Nested"}]},{"displayValue":"Page","name":"page","section":"Data","label":"page","type":"reference","value":"sp_page","ed":{"reference":"sp_page"}},{"hint":"Number of categories to load on page load","name":"number_of_categories_to_load","section":"Data","default_value":"15","label":"Number of categories to load","type":"integer"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	var catalog_id = $sp.getParameter("catalog_id") ? $sp.getParameter("catalog_id") + "" : "-1";
+	var catalogSelectorArr = [{value: "-1", displayValue: gs.getMessage("All")}];
+	data.selectedCatalogIndex = catalog_id == -1 ? 0 : -1;
+	var catalogIDs = $sp.getCatalogs().value + "";
+	var catalogs = catalogIDs.split(",");
+	var isCatalogAccessibleViaPortal = catalog_id == -1 ? true : false;
+	catalogs.forEach(function(catalogSysId) {
+		if (catalog_id == catalogSysId) {
+			isCatalogAccessibleViaPortal = true;
+		}
+	});
+
+	var counter = 1;
+	catalogs.forEach(function(catalogSysId) {
+		var catalog = new sn_sc.Catalog(catalogSysId);
+		var catalogObj = {value: catalogSysId, displayValue: catalog.getTitle()};
+		if (catalog.canView()) {
+			if (catalog_id === catalogSysId) {
+				data.selectedCatalogIndex = counter;
+			}
+			catalogSelectorArr.push(catalogObj);
+			counter++;
+		}
+	});
+	data.catalogSelectorArr = catalogSelectorArr;
+	
+	data.catalog_id = catalog_id ? catalog_id : "-1";
+	data.showMoreMsg = gs.getMessage("Show More");
+	data.pleaseWait = gs.getMessage("Please wait... fetching categories");
+	//var categoryId = JSUtil.nil($sp.getParameter('sys_id')) ? "" : $sp.getParameter('sys_id') + "";
+		var categoryId = $sp.getParameter('sys_id') ? "" : $sp.getParameter('sys_id') + "";
+	data.categoryId = categoryId;
+	var catalogIDs = (data.catalog_id && data.catalog_id !== "-1") ? data.catalog_id : $sp.getCatalogs().value + "";
+	var viewType = '';
+	var checkCanView = false;
+	var nestedLayout = (options.category_layout !== "Flat");
+	var dynamicCategory = false;
+	
+	var catalogArr = catalogIDs.split(",");
+	var catalogs = [];
+	catalogArr.forEach(function(catalogSysId) {
+		var catalog = new sn_sc.Catalog(catalogSysId);
+		if (catalog.canView()) {
+			catalogs.push(catalogSysId);
+		}
+	});
+	
+	data.categoryId = categoryId;
+	var msg = data.messages = {};
+	msg.expanded = gs.getMessage("Expanded");
+	msg.collapsed = gs.getMessage("Collapsed");
+	msg.catalogTitle = options.catalog_title? gs.getMessage(options.catalog_title) : gs.getMessage('Catalogs');
+	
+	data.largeDataSet = gs.getProperty("glide.sc.largeSet.optimization.enable", "false");
+	if (data.largeDataSet == 'true')
+		 nestedLayout = false;
+	
+	if (options.page) {
+		var page = new GlideRecord('sp_page');
+		if (page.get(options.page))
+			data.page = page.id + '';
+	}
+	checkCanView = (options.check_can_view == 'true');
+	
+	if(!isCatalogAccessibleViaPortal) {
+		return;
+	}
+	data.categoriesList = [];
+	var categoriesInPage = options.number_of_categories_to_load || 15;
+	data.limit = categoriesInPage;
+	
+	if (input && input.new_limit)
+		data.limit = input.new_limit;
+	if (input && input.categoriesList)
+		data.categoriesList = input.categoriesList.slice(); //Copy the input array
+	
+	if (input && input.startWindow) {
+		data.endWindow = input.endWindow;
+	}
+	else {
+		data.startWindow = 0;
+		data.endWindow = 0;
+	}
+
+	while (data.categoriesList.length < data.limit + 1) {
+			data.startWindow = data.endWindow;
+			data.endWindow = data.endWindow + categoriesInPage;
+			var catGr = queryCategory(catalogs, nestedLayout, dynamicCategory, data.startWindow, data.endWindow);
+			if (!catGr.hasNext())
+				break;
+			fetchCategories(catGr, data.categoriesList);
+	}
+	
+	if (data.categoriesList.length > data.limit)
+			data.showMore = true;
+	else
+		data.showMore = false;
+	
+	data.more_msg = gs.getMessage("Showing {0} categories", data.limit);
+	
+	
+	function fetchCategories(categoriesGr, categories) {
+		while (categoriesGr.next()) {
+			var categoryJS = new sn_sc.CatCategory(categoriesGr.getUniqueValue() + '');
+			if (!categoryJS.canView())
+				continue;
+		
+			var categoryDetails = getCategoryDetails(categoryJS, 0);
+			categoryDetails.sys_id = categoriesGr.getUniqueValue();
+			categories.push(categoryDetails);
+		}
+	}
+	
+	function queryCategory(catalogs, nestedLayout, dynamicCategory, startWindow, endWindow) {
+			var categoriesGr = new GlideRecord('sc_category');
+		categoriesGr.addQuery("u_display_on_portal","true");
+			categoriesGr.addQuery("sc_catalog", catalogs);
+			if (!dynamicCategory)
+				categoriesGr.addQuery("sys_class_name", "sc_category");
+			categoriesGr.addActiveQuery();
+			categoriesGr.orderBy('order');
+			categoriesGr.orderBy('title');
+			if (nestedLayout)
+				categoriesGr.addNullQuery("parent");
+			categoriesGr.chooseWindow(startWindow, endWindow);
+			categoriesGr.query();
+			return categoriesGr;
+	}
+	
+	function getCategoryDetails(categoryJS, level) {
+		var categoryDetails = {};
+		var showChildren = false;
+		if (!categoryJS) {
+			return categoryDetails;
+		}
+		categoryDetails.title = categoryJS.getTitle();
+		categoryDetails.level = level;
+		categoryDetails.description = categoryJS.getDescription();
+		categoryDetails.full_description = categoryJS.getFullDescription();
+		categoryDetails.icon = categoryJS.getIconSRC();
+		categoryDetails.header_icon = categoryJS.getHeaderIconSRC();
+		categoryDetails.homepage_image = categoryJS.getHomepageImageSRC();
+		categoryDetails.sys_id = categoryJS.getID();
+		categoryDetails.showChildren = (categoryDetails.sys_id === categoryId);
+		categoryDetails.catalog = {"sys_id": categoryJS.getCatalog(), "title": new sn_sc.Catalog(categoryJS.getCatalog()).getTitle()}
+		if (catalog_id == -1 && catalogSelectorArr.length > 2)
+			categoryDetails.catalog_tooltip = gs.getMessage("[{0}]", categoryDetails.catalog.title);
+		else
+			categoryDetails.catalog_tooltip = '';
+		
+		if (data.largeDataSet != 'true') {
+			if (checkCanView)
+					categoryDetails.count = categoryDetails.totalCount = categoryJS.getViewableItemsCount(true);
+				else
+					categoryDetails.count = categoryDetails.totalCount = categoryJS.getItemsCount(true);
+		}
+		else {
+			categoryDetails.count = 1;
+		}
+		
+		var subCategoryCounts = 0;
+		if (nestedLayout) {
+			var subcategories = categoryJS.getViewableSubCategories();
+			
+			if (subcategories.length == 0) {
+				categoryDetails.subcategories = [];
+			} 
+			else {
+					categoryDetails.subcategories = [];
+					subcategories.forEach(function(subCategory) {
+						var subCategoryJS = new sn_sc.CatCategory(subCategory.sys_id + '');
+						var category = getCategoryDetails(subCategoryJS, level + 1);
+						categoryDetails.totalCount = categoryDetails.totalCount + category.totalCount;
+						categoryDetails.subcategories.push(category);
+						categoryDetails.showChildren = categoryDetails.showChildren || category.showChildren;
+					});
+				}
+		}
+		else {
+			categoryDetails.totalCount = categoryDetails.count;
+		}
+		return categoryDetails;
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-09-25 05:09:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f37c3756db04045063599017db961915</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>RSP SC Categories</sys_name>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>sp_widget_f37c3756db04045063599017db961915</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-09-25 06:16:24</sys_updated_on>
+        <template><![CDATA[<div ng-if="c.data.catalogSelectorArr.length > 2" ng-class="{'hidden-xs' : hideCategoryWidgetInXS}" class="ng-hide panel panel-{{::options.color}} category-widget no-border">
+  <div class="panel-primary panel-heading ">
+    <h2 class="h4 panel-title">
+      {{::data.messages.catalogTitle}}
+    </h2>
+  </div>
+  <ul class="list-group category-list" role="list" aria-label="{{::data.messages.catalogTitle}}">
+    <li role="listitem" class="list-group-item text-overflow-ellipsis" ng-include="'catalog-template.html'"/>
+  </ul>
+</div>
+<script type="text/ng-template" id="catalog-template.html">
+  <select class="sc-basic-select" ng-change="changeCatalog(selectedCatalog)" sn-focus="true" ng-model="selectedCatalog" ng-options="catalog.displayValue for catalog in c.data.catalogSelectorArr track by catalog.value"/>
+</script>
+
+<div ng-class="{'hidden-xs' : hideCategoryWidgetInXS}" class="panel panel-{{::options.color}} category-widget no-border">
+  <div class="panel-heading">
+    <h2 class="h4 panel-title">
+      <span class="pull-right visible-xs" >
+      	<i class="fa fa-times-circle" ng-click="hideBrowseCategory()" aria-label="${Show Items}" tabindex="0"/>
+      </span>
+      <span ng-if="::options.glyph">
+        <fa name="{{::options.glyph}}" />
+      </span>{{::options.title}}</h2>
+  </div>
+  <ul class="list-group category-list" role="list" aria-label="${Categories}">
+    <li role="listitem" 
+        class="list-group-item text-overflow-ellipsis" 
+        ng-if="category.totalCount > 0" ng-include="'category-template.html'" 
+        ng-repeat="category in data.categoriesList | limitTo: data.limit track by category.sys_id">
+    </li>
+  </ul>
+  <div class="panel-footer text-center" ng-if="data.showMore">
+    <a href="javascript:void(0)" role="button" class="text-center" ng-click="loadMore()" >{{::data.showMoreMsg}}</a>
+    <div class="text-muted text-center">
+      {{data.more_msg}}
+    </div>
+  </div>
+</div>
+<script type="text/ng-template" id="category-template.html">
+	<div ng-click="categorySelected(category)"
+		sn-focus="category.sys_id == data.categoryId"
+		ng-enabled="category.totalCount > 0"
+    ng-class="{true: 'text-active', false: ''}[category.sys_id == data.categoryId]"
+          tabindex="0" class="group-item group-item-primary">
+      <i ng-if="::category.subcategories.length > 0 && category.totalCount > category.count" 
+          class="l-h-1_6x pull-left fa" 
+          ng-class="{true: 'fa-minus-square-o', false: 'fa-plus-square-o'}[category.showChildren]" 
+          aria-label="{{category.showChildren? '${collapse category} ' + category.title : '${expand category} ' + category.title}}"
+          ng-click="displayChildren($event, category)"/></i>
+      <span class="badge pull-right pointer" ng-if="options.omit_badges != 'true' && data.largeDataSet != 'true'">{{::category.totalCount}}</span>
+      <span class="block text-overflow-ellipsis category" 
+				  id="{{::category.sys_id}}"
+          uib-tooltip="{{::category.title}} {{::category.catalog_tooltip}}"
+          tooltip-placement="top"
+          tooltip-enable="!isTouchDevice()"
+          tooltip-append-to-body="true">
+          {{::category.title}}
+          <span class="sr-only">${items}</span>
+      </span>
+    </div>
+  	<ul class="list-group sub-category-list list-bg-primary" role="list" aria-label="{{category.title}} ${subcategories}" ng-if="category.showChildren && category.subcategories.length > 0" ng-class="{true: 'no-indent', false: ''}[category.level > 2]">
+      <li role="listitem" 
+      		class="list-group-item text-overflow-ellipsis" 
+          ng-include="'category-template.html'" 
+          ng-repeat="category in category.subcategories track by category.sys_id" 
+          ng-if="category.totalCount > 0">
+      </li>
+  	</ul>
+</script>]]></template>
+    </sp_widget>
+</record_update>

@@ -6,7 +6,8 @@
         <css/>
         <display_field>u_action_code</display_field>
         <field_list>number,company,opened_by,caller_id,contact_type,short_description,state,opened_at,sys_updated_on,closed_at</field_list>
-        <filter table="incident">active=true^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        <filter table="incident">active=true^u_non_service_portal=false^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="u_non_service_portal" goto="false" newquery="false" operator="=" or="false" value="false"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter>
         <glyph/>
@@ -26,7 +27,7 @@
         <sys_created_on>2018-04-16 11:56:02</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>170c93bcdbe113006c8e5ec0cf96195b</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>My Incidents</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -34,7 +35,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_instance_table_170c93bcdbe113006c8e5ec0cf96195b</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-18 09:51:36</sys_updated_on>
+        <sys_updated_on>2019-10-01 23:56:34</sys_updated_on>
         <table>incident</table>
         <title>My Incidents</title>
         <url/>

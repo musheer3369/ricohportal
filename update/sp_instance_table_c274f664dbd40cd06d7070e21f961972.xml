@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field>u_ad_object_category</display_field>
+        <field_list>name,email,title,phone,mobile_phone,company</field_list>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description>Contacts</short_description>
+        <size>md</size>
+        <sp_column display_value="1">cf44fe64dbd40cd06d7070e21f96195d</sp_column>
+        <sp_page/>
+        <sp_widget display_value="RSP Data Table from Instance">f287ffcadb3013006c8e5ec0cf961978</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-01 23:39:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c274f664dbd40cd06d7070e21f961972</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Contacts</sys_name>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>sp_instance_table_c274f664dbd40cd06d7070e21f961972</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-10-01 23:58:20</sys_updated_on>
+        <table>sys_user</table>
+        <title>Contacts</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=c274f664dbd40cd06d7070e21f961972"/>
+</record_update>
