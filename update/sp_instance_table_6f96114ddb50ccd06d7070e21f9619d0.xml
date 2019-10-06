@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field>u_name</display_field>
+        <field_list>u_name,u_invoicenumber,u_customer,u_billtolocation,u_shiptolocation,u_totalamount,sys_created_on</field_list>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description>Invoices</short_description>
+        <size>md</size>
+        <sp_column display_value="1">b609b885db9c8cd06d7070e21f9619df</sp_column>
+        <sp_page/>
+        <sp_widget display_value=" RSP Data Table from Instance Invoice">ec269149db50ccd06d7070e21f96192e</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-03 06:06:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6f96114ddb50ccd06d7070e21f9619d0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>sp_instance_table_6f96114ddb50ccd06d7070e21f9619d0</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-10-03 06:52:30</sys_updated_on>
+        <table>u_mst_invoice</table>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=6f96114ddb50ccd06d7070e21f9619d0"/>
+</record_update>

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
     <sp_header_footer action="INSERT_OR_UPDATE">
         <category/>
-        <client_script><![CDATA[function() {
+        <client_script><![CDATA[function($scope,$rootScope) {
   /* widget controller */
   var c = this;		
   
-	
+	$scope.loadingIndicator=$rootScope.loadingIndicator;
 
-	
+	$scope.$on('sp_loading_indicator',function(e,value){
+		$scope.loadingIndicator=value;
+	});
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>.navbar-toggle.pull-left {&#13;
@@ -22,6 +24,12 @@
 .btn-chat{&#13;
 	background-color:#CF142B;&#13;
     color:#ffffff;&#13;
+}&#13;
+.header-loader{ &#13;
+  float:left;&#13;
+	width:50px;&#13;
+  position:relative:&#13;
+    top:24px;&#13;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -66,7 +74,7 @@
         <sys_created_on>2018-03-14 03:56:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c4f17f02db3013006c8e5ec0cf96199a</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>73</sys_mod_count>
         <sys_name>RSP Header</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -74,7 +82,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_header_footer_c4f17f02db3013006c8e5ec0cf96199a</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-08-16 07:18:36</sys_updated_on>
+        <sys_updated_on>2019-10-02 23:49:12</sys_updated_on>
         <template><![CDATA[<div class="white-backdrop">
   <div class="container-fluid">
     <div class="row" >
@@ -84,9 +92,17 @@
             <img style="max-width:300px" class="img-responsive" alt="Responsive image"
                  ng-if="portal.logo" ng-src="{{portal.logo}}"  />
 
-          </a>  
-          
-        </div>  
+          </a>        
+         </div>
+      	          
+            <div class="text-center">
+                <div class="header-loader" ng-show="loadingIndicator" >
+                  <div class="hidden-xs  la-sm">
+                    <img src="rsp-loader.svg" class="loading-spinner" width="50px" height="50px"/>
+                  </div>          	          
+                </div> 
+             </div>
+      
           <div class="text-right " style="padding:20px">
             <button type="button" class="btn btn-chat" > <i class="fa fa-comment-o" aria-hidden="true"></i> Chat Now with Customer Care</button>
           </div>
@@ -121,6 +137,8 @@
                   ng-include="'ricoh-nav-template'" class="menu-link">      
      		 </li>	
   		</ul>
+    
+      
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown">
            <a href="#" class="dropdown-toggle" data-toggle="dropdown">

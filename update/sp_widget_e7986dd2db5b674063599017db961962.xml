@@ -6,7 +6,10 @@
   var c = this;
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>div{&#13;
+  padding-left:5px;&#13;
+  padding-top:5px;&#13;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -23,6 +26,10 @@
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
+	data.isPoc=false;
+	if(gs.getUser().hasRole("poc")){
+		data.isPoc=true;
+	}
 
 })();]]></script>
         <servicenow>false</servicenow>
@@ -31,7 +38,7 @@
         <sys_created_on>2019-01-31 15:24:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e7986dd2db5b674063599017db961962</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>RSP Data Now Widget</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -39,16 +46,23 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_e7986dd2db5b674063599017db961962</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-01-31 15:24:47</sys_updated_on>
+        <sys_updated_on>2019-10-03 03:31:06</sys_updated_on>
         <template><![CDATA[<div> 
     <h3>Data Now </h3>  
 </div> 
 
-<div class="row">
-  <div class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMyAssets'">
+<div class="row" >
+  <div ng-show="data.isPoc" class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMyAssets'">
   
   </div>
-  <div class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMyReports'">  
+  <div ng-show="data.isPoc" class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMyReports'">  
+  </div>  
+</div> 
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMySurveys'">
+  
+  </div>
+  <div ng-show="data.isPoc" class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMyInvoices'">  
   </div>  
 </div> ]]></template>
     </sp_widget>

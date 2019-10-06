@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
-        <category/>
+        <category>custom</category>
         <client_script><![CDATA[function ($rootScope,$scope, $location, spUtil, amb, $http,$timeout,$q, rpAccountService) {
 	var c = this;
 	
@@ -476,7 +476,7 @@ tbody tr:last-child {&#13;
         <docs/>
         <field_list>title,maximum_entries,glyph,color,sp_page,field_list,table,filter,order,order_by,order_direction</field_list>
         <has_preview>false</has_preview>
-        <id>rsp-data-table</id>
+        <id>rsp-data-table-invoice</id>
         <internal>false</internal>
         <link><![CDATA[function(scope, element, attrs, ctrl){
 	var $ul, $contextMenu;
@@ -600,7 +600,7 @@ tbody tr:last-child {&#13;
 		});
 	}
 }]]></link>
-        <name>RSP  Data Table</name>
+        <name> RSP  Data Table Invoice</name>
         <option_schema>[{"name":"title","default_value":"My Incidents","label":"title","type":"string"}]</option_schema>
         <public>false</public>
         <roles>snc_external,snc_internal</roles>
@@ -638,7 +638,7 @@ tbody tr:last-child {&#13;
 		grc.addActiveQuery();
 		grc.addNotNullQuery("name");	  
 		grc.addEncodedQuery('u_site_idSTARTSWITH'+input.searchStr+'^ORnameSTARTSWITH'+input.searchStr);	
-		grc.addEncodedQuery("sys_domain!=global^ORsys_domain=NULL");	
+		grc.addEncodedQuery("sys_domainISNOTEMPTY^ORsys_domain!=global");	
 		grc.setLimit(30);
 		grc.orderBy("name");
 		grc.query();		
@@ -648,6 +648,7 @@ tbody tr:last-child {&#13;
 				
 				obj.name = grc.getDisplayValue('name');
 				obj.value = grc.getDisplayValue('sys_id');
+				
 				accounts.push(obj);
 			}	
 			data.accounts = accounts;				
@@ -738,19 +739,17 @@ tbody tr:last-child {&#13;
 	
 	if(data.AccountsData)
 		{
-		gr.addEncodedQuery("company.sys_idIN" + data.AccountsData);
+		gr.addEncodedQuery("u_customer.sys_idIN" + data.AccountsData);
 		}
 	else
 		{
-			gr.addQuery("company.sys_id",data.myCompany.value);
+			gr.addQuery("u_customer.sys_id",data.myCompany.value);
 			
 		}
 	// filter exclude from portal
-	if(data.table == "incident"){
-		gr.addQuery("u_non_service_portal","false");	
-	}
+
 	//console.log("encoded query");
-//	console.log(gr.getEncodedQuery());
+	console.log("row count:" + gr.getEncodedQuery());
 	gr._query();
 
 	data.row_count = gr.getRowCount();
@@ -818,23 +817,23 @@ tbody tr:last-child {&#13;
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-04-16 05:59:55</sys_created_on>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-03 03:53:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>268a8e70db6113006c8e5ec0cf9619ff</sys_id>
-        <sys_mod_count>108</sys_mod_count>
-        <sys_name>RSP  Data Table</sys_name>
+        <sys_id>4b38b045db9c8cd06d7070e21f96197f</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name> RSP  Data Table Invoice</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
-        <sys_update_name>sp_widget_268a8e70db6113006c8e5ec0cf9619ff</sys_update_name>
+        <sys_update_name>sp_widget_4b38b045db9c8cd06d7070e21f96197f</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-03 00:42:32</sys_updated_on>
+        <sys_updated_on>2019-10-03 07:03:57</sys_updated_on>
         <template><![CDATA[<div  class="row ricoh-panel" ng-init="c.init()">
       <widget id="breadcrumbs"></widget>
-  		<div class="col-xs-9 col-sm-8 col-md-5 col-lg-4" ng-include="'rspKeywordSearch'">         
-  		</div>    
+  	<!--	<div class="col-xs-9 col-sm-8 col-md-5 col-lg-4" ng-include="'rspKeywordSearchInvoice'">         
+  		</div>    -->
         <div class="pull-right-sm col-xs-9 col-sm-8 col-md-5 col-lg-4" ng-show="data.selectAccounts" >
          <select id="my-accounts" multiple>
           </select>          
@@ -860,7 +859,7 @@ tbody tr:last-child {&#13;
                   <span class="panel-title">
                      <i ng-if="options.glyph" class="fa fa-{{options.glyph}} m-r"></i>{{data.short_description }}
                     <button ng-if="data.table == 'incident'" ng-click="newIncident()" class="btn btn-default ricoh-button"> New</button>
-                    <div class="pull-right" ng-include="'rspActions'"></div>
+                 <!--   <div class="pull-right" ng-include="'rspActionsInvoice'"></div>-->
                   </span>           		 
           </div>   
       

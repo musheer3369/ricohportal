@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>Service Portal</category>
+        <format/>
+        <height/>
+        <image>ce7d73b0db588cd06d7070e21f9619b0</image>
+        <name>rsp-loader.svg</name>
+        <size_bytes>3335</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-02 23:36:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>815d73b0db588cd06d7070e21f9619ab</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>rsp-loader.svg</sys_name>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>db_image_815d73b0db588cd06d7070e21f9619ab</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-10-02 23:37:02</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>image</file_name>
+        <image_height/>
+        <image_width/>
+        <size_bytes>3335</size_bytes>
+        <size_compressed>443</size_compressed>
+        <state/>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-02 23:37:02</sys_created_on>
+        <sys_domain>774190f01f1310005a3637b8ec8b70ef</sys_domain>
+        <sys_domain_path>!!!/</sys_domain_path>
+        <sys_id>ce7d73b0db588cd06d7070e21f9619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-10-02 23:37:02</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>815d73b0db588cd06d7070e21f9619ab</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="ce7d73b0db588cd06d7070e21f9619b0">ce7d73b0db588cd06d7070e21f9619b0</sys_attachment>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-02 23:37:02</sys_created_on>
+        <sys_id>027d73b0db588cd06d7070e21f9619b1</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>1ZfBbqMwEEDv/YrR7GX3ULCBEEhCpHbP3cNqLz064BArYJDtBPL3HbKrrVL1VJGDLSxhbGb8njQybOy5hrIR1hbYVPbR9kpraRAGVblDgZyxfkSAg1T1wb2Px7bR9MrBuX4VhsMwBEMcdKYOI8ZYSEHx75LV2Ch9/Gwhz/M8vM4inJUcnruxQAYMKMXUEXojrTRn+WR7WbrfwqmuwPFFVa/UEay7NLLAnSiPtelOulqB7rRc43ZTgzNC231n2gJN54ST3xkspusHbh8ANoYiAiVMlgiXAqMEwdAwD6YbepAE2X8HKb7jRwh71TQFfiv3PIl212gUT2jVUhYQzhm1Ozn5S7S0ua4XpXIXIhTNSZIwviawo7z8Ue00ZGuOUJ0MTViEnayVLvCRBTlPbxpNGtlL4X4SKO1D6UrulVZOEm34L/kVLJzItg+bsP5cQ+yVhyy+acl8HlKvPCwX85HnXpGn6b0qgUdeiVhk9yoFvvBLxIzkmVfkye2psJxPRMS9EhF/aDOKSLwSEc1YDNHSK3R+v5MhZl6ZYNndyiH26HORfQ17+lnZvgEGOoMdBw0AAA==</data>
+        <length>580</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="ce7d73b0db588cd06d7070e21f9619b0">ce7d73b0db588cd06d7070e21f9619b0</sys_attachment>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-02 23:37:02</sys_created_on>
+        <sys_id>827d73b0db588cd06d7070e21f9619b1</sys_id>
+    </sys_attachment_doc>
+</record_update>
