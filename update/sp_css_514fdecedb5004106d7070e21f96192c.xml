@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css">
+    <sp_css action="INSERT_OR_UPDATE">
+        <css>html,body{&#13;
+height:100%;&#13;
+}&#13;
+&#13;
+&#13;
+&#13;
+main{&#13;
+	overflow:auto;&#13;
+    padding-bottom:50px;&#13;
+  min-height:100%;&#13;
+}&#13;
+footer{&#13;
+background-color: #666666;&#13;
+  border-bottom:4px solid #cf142b;&#13;
+  position:relative;&#13;
+  height:70px;&#13;
+  margin-top:-70px;&#13;
+  clear:both;&#13;
+}&#13;
+&#13;
+</css>
+        <name>rsp stylesheet</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-06 13:58:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>514fdecedb5004106d7070e21f96192c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>rsp stylesheet</sys_name>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>sp_css_514fdecedb5004106d7070e21f96192c</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-10-06 13:59:43</sys_updated_on>
+    </sp_css>
+</record_update>

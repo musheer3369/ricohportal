@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_theme_css_include">
+    <m2m_sp_theme_css_include action="INSERT_OR_UPDATE">
+        <order/>
+        <sp_css_include display_value="rspstyle">6f2f5ecedb5004106d7070e21f961918</sp_css_include>
+        <sp_theme display_value="Ricoh Theme">3a33774adb3013006c8e5ec0cf9619fa</sp_theme>
+        <sys_class_name>m2m_sp_theme_css_include</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-06 13:57:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cf3f12cedb5004106d7070e21f961994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>rspstyle.Ricoh Theme</sys_name>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>m2m_sp_theme_css_include_cf3f12cedb5004106d7070e21f961994</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-10-06 13:57:43</sys_updated_on>
+    </m2m_sp_theme_css_include>
+</record_update>

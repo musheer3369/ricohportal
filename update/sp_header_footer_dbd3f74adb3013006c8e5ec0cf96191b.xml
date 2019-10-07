@@ -20,15 +20,18 @@
 }&#13;
 .row-buffer&#13;
 {&#13;
-  margin:40px 40px 40px 0px;&#13;
+  margin:0px 0px 0px 10px;&#13;
 }&#13;
 &#13;
 .rsp-footer{&#13;
- border-bottom:4px solid #cf142b;&#13;
- padding-bottom:20px;&#13;
-  border-top:2px solid:#dedede;&#13;
-  background-color: #666666;&#13;
+  //border-bottom:4px solid #cf142b;&#13;
  &#13;
+ // border-top:2px solid:#dedede;&#13;
+ // background-color: #666666;&#13;
+ // position:relative;&#13;
+ // height:50px;&#13;
+ // margin-top:-50px;&#13;
+ // clear:both;&#13;
  &#13;
 }&#13;
 a:link{&#13;
@@ -67,7 +70,7 @@ a:visited{&#13;
         <sys_created_on>2018-03-14 04:05:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>dbd3f74adb3013006c8e5ec0cf96191b</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>77</sys_mod_count>
         <sys_name>RSP Footer</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -75,11 +78,11 @@ a:visited{&#13;
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_header_footer_dbd3f74adb3013006c8e5ec0cf96191b</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-09-24 06:24:18</sys_updated_on>
-        <template><![CDATA[<div class=" container-fluid rsp-footer " >
-  <div class="row row-buffer ">
+        <sys_updated_on>2019-10-06 13:54:22</sys_updated_on>
+        <template><![CDATA[<div class="container-fluid rsp-footer  " >
+  <div class="row  ">
 
-    <div class="col-md-4 col-md-offset-0">      
+    <div class="col-md-4 col-md-offset-0 row-buffer">      
       <div class="footer-left">      
       <!--  <a href ng-click="c.showTermsOfUse()">Terms of Use and Conditions</a>-->
          <a href data-toggle="modal" data-target="#myModal">Terms of Use and Conditions</a>
@@ -89,8 +92,8 @@ a:visited{&#13;
 
   </div>
   
-  <div>
-    <span style="color:#ffffff">&copy; 2019 Ricoh USA. Inc. All Rights Reserved</span>
+  <div class="row row-buffer">
+    <h5 style="color:#ffffff;">&copy; 2019 Ricoh USA. Inc. All Rights Reserved</h5>
   </div>
 </div>
 
