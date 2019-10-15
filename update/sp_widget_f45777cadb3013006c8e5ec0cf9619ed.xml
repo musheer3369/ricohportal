@@ -4,8 +4,10 @@
         <client_script><![CDATA[function ($scope, $http, spUtil, nowAttachmentHandler, $rootScope, $sanitize, $window, $sce, $timeout) {
 	var c = this;
 	c.quantity = 1;
+	//bd9c8d31dbec3a006d7070e21f961900
 	console.log("Default set Timeout:" + c.options.set_timeout);
-	$scope.data.sc_cat_item.description = $sce.trustAsHtml($scope.data.sc_cat_item.description);
+	//$scope.data.sc_cat_item.description = 
+		//$sce.trustAsHtml($scope.data.sc_cat_item.description);
 
 	c.showAddCartBtn = function() {
 		return c.options.show_add_cart_button &&
@@ -142,10 +144,10 @@
 		var page = table == 'sc_request' ? 'sc_request' : 'ticket';
 			if (c.options.page) {page = c.options.page;}
 		var landingurl = spUtil.format(c.options.url, {page: page, table: table, sys_id: sys_id});
-
+console.log(landingUrl);
 		 if(table == 'incident' || table == 'sc_request')
 			{
-				page ='pr_form';
+				page ='form';
 			}		
 	
 		if (c.options.table) {table = c.options.table;}
@@ -191,7 +193,7 @@
         <description/>
         <docs/>
         <field_list>color</field_list>
-        <has_preview>false</has_preview>
+        <has_preview>true</has_preview>
         <id>rsp-sc-catalog-item</id>
         <internal>false</internal>
         <link/>
@@ -205,7 +207,7 @@
 	options.set_timeout = 10000; // set default timeout to 10 seconds
 	//options.auto_redirect=true;
 	options.show_add_cart_button = (options.show_add_cart_button == "true");
-
+console.log("HERE");
 	if (options.page) {
 		var pageGR = new GlideRecord("sp_page");
 		options.page = (pageGR.get(options.page)) ? pageGR.getValue("id") : null;
@@ -234,7 +236,7 @@
 		data.sys_id = input.sys_id;
 	else
 		data.sys_id = $sp.getParameter("sys_id") || $sp.getParameter('sl_sys_id');
-
+data.sys_id="bd9c8d31dbec3a006d7070e21f961900";
 	data._attachmentGUID = gs.generateGUID();
 	// portal can specify a catalog home page
 	data.sc_catalog_page = $sp.getDisplayValue("sc_catalog_page") || "sc_home";
@@ -261,15 +263,15 @@
         <sys_created_on>2018-03-14 04:20:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f45777cadb3013006c8e5ec0cf9619ed</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>RSP SC Catalog Item</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_f45777cadb3013006c8e5ec0cf9619ed</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-03-17 02:41:43</sys_updated_on>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-10-10 06:47:52</sys_updated_on>
         <template><![CDATA[<div id="sc_cat_item" >
   <div class="row" ng-if="::data.sc_cat_item" >
     <div ng-if="::data.sc_cat_item.picture" class="col-sm-3">

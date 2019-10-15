@@ -57,7 +57,7 @@
 		$event.stopPropagation();
 		$event.preventDefault();
 		var evt = {item: item, search: lp};
-
+  
 		// This will let a wrapper widget intercept and redirect somewhere else
 		$scope.$emit($scope.options.click_event_name, evt);
 	};
@@ -71,6 +71,8 @@
 
 	$scope.getItemHREF = function(item) {
 		var lp = getLinkParts(item);
+		
+		console.log(lp.id);
 		if (typeof lp == "string")
 			return lp;
 
@@ -224,7 +226,7 @@
 		item.price = catItemDetails.price;
 		item.sys_id = catItemDetails.sys_id;
 		item.hasPrice = catItemDetails.show_price;
-		item.page = 'sc_cat_item';
+		item.page = 'rsp_request_form';
 		item.type = catItemDetails.type;
 		item.order = catItemDetails.order;
 		item.sys_class_name = catItemDetails.sys_class_name;
@@ -329,7 +331,7 @@
         <sys_created_on>2018-07-27 13:14:21</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b82045f1dba75f005524fbec0f961964</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>RSP SC Category Page</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -337,7 +339,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_b82045f1dba75f005524fbec0f961964</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-02 00:49:39</sys_updated_on>
+        <sys_updated_on>2019-10-10 06:50:42</sys_updated_on>
         <template><![CDATA[<div class="m-t-sm " ng-class="{'hidden-xs' : hideItemWidget, 'm-l-sm': !isMobile}">
   <h4 ng-if="data.error">{{data.error}}</h4>
   <div ng-init="spSearch.targetCatalog()">
@@ -376,6 +378,7 @@
             <td>
               <img ng-src="{{::item.picture}}?t=small" ng-if="item.picture" alt="{{::item.name}}" class="m-r-sm m-b-sm item-image pull-left"/>
               <div class="break-word">
+                {{item.target}}
                 <a target="{{::item.target}}" ng-href="{{::getItemHREF(item)}}"> {{::item.name}}<span ng-if="item.content_type == 'external'" aria-label="${External Link}"> ➚</span> </a>
               </div>
             </td>

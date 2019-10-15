@@ -481,7 +481,7 @@ ul {
 	data.btnLabel = options.btnLabel || gs.getMessage("Send");
 	data.includeExtended = options.includeExtended || false;
 	data.use_dynamic_placeholder = options.use_dynamic_placeholder;
-	console.log("Table:" + data.sys_id);
+	
 	data.isNewRecord = false;//data.sys_id == -1 || gr.isNewRecord();
 	data.hideAttachmentBtn = options.hideAttachmentBtn;
 
@@ -500,8 +500,9 @@ ul {
 
 	if (input) { // if we have input then we're saving
 		if (input.journalEntry && input.journalEntryField){
-			if (gr.canWrite(input.journalEntryField)){
-				gr.setDisplayValue(input.journalEntryField, input.journalEntry);
+			if (gr.canWrite(input.journalEntryField)){				
+			//	gr.setDisplayValue(input.journalEntryField, input.journalEntry);
+				gr.comments = input.journalEntry;
 				gr.update();
 				$sp.logStat('Comments', data.table, data.sys_id, input.journalEntry);
 			}
@@ -559,7 +560,7 @@ ul {
         <sys_created_on>2019-09-30 12:54:35</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fb379fc8db1808d06d7070e21f9619fa</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>RSP Ticket Conversation</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -567,7 +568,7 @@ ul {
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_fb379fc8db1808d06d7070e21f9619fa</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-09-30 13:39:55</sys_updated_on>
+        <sys_updated_on>2019-10-08 06:49:32</sys_updated_on>
         <template><![CDATA[<div>
   <div ng-if="!data.canRead && !data.isNewRecord">
     ${Requested record not found}

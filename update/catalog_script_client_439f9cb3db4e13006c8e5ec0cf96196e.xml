@@ -31,7 +31,8 @@
 		
 		try{
 		 var answer = response.responseXML.documentElement.getAttribute("answer");
-		answer=answer.toString();			
+		answer=answer.toString();	
+			
          g_form.addOption('my_sys_class_name');
 		 var choice = answer.split('|'); // Parse out the string by |
         var label_value;
@@ -56,7 +57,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>439f9cb3db4e13006c8e5ec0cf96196e</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>CiClassOptions</sys_name>
         <sys_overrides/>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
@@ -65,7 +66,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>catalog_script_client_439f9cb3db4e13006c8e5ec0cf96196e</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-07-27 12:08:20</sys_updated_on>
+        <sys_updated_on>2019-10-08 05:54:06</sys_updated_on>
         <table/>
         <type>onLoad</type>
         <ui_type>10</ui_type>

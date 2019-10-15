@@ -13,17 +13,17 @@
         <description/>
         <field/>
         <global>true</global>
-        <isolate_script>false</isolate_script>
+        <isolate_script>true</isolate_script>
         <messages/>
         <name>GetSubAssetList</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
 	 g_form.clearOptions('cmdb_ci'); // I recommend clearing out the select box after each change
-	
-   if (isLoading || newValue == '' || oldValue =='') {
-	   console.log("Return from Sub Asset List");
-      return;
-   }
+
+  // if (isLoading || newValue == '' || oldValue =='') {
+	 //  console.log("Return from Sub Asset List");
+   //   return;
+  // }
 
    //Type appropriate comment here, and begin script below
    var ga=new GlideAjax('rsp_ci_helper');
@@ -35,7 +35,6 @@
 	function setSubAsset(response){
 		 var answer = response.responseXML.documentElement.getAttribute("answer");
 		answer=answer.toString();
-		
 		// g_form.addOption('cmdb_ci', '','-- NONE --');
 		
 		   var choice = answer.split('|'); // Parse out the string by |
@@ -55,7 +54,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8810e0f3db4e13006c8e5ec0cf96194e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>GetSubAssetList</sys_name>
         <sys_overrides/>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
@@ -64,7 +63,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>catalog_script_client_8810e0f3db4e13006c8e5ec0cf96194e</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-07-26 21:09:07</sys_updated_on>
+        <sys_updated_on>2019-10-08 05:52:46</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

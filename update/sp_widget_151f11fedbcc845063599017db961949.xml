@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>sp_platform</category>
-        <client_script><![CDATA[function($rootScope, $scope, $timeout, $location, $log, $window, spUtil, nowAttachmentHandler, spAriaUtil, spNavStateManager) {
+        <client_script><![CDATA[function($rootScope, $scope, $timeout, $location, $log, $window, spUtil, nowAttachmentHandler, spAriaUtil, spNavStateManager,glideUserSession) {
+var c = this;
   $scope.submitting = false;
   $scope.mandatory = [];
   $scope.errorMessages = [];
@@ -212,6 +213,10 @@
   }, true);
 
   function hideRelatedLists() {
+	  
+
+	  
+	  
     if (!$scope.data.f._related_lists)
       return true;
 
@@ -265,6 +270,14 @@
   if ($scope.data.f.title) {
 	  $scope.$emit('sp.widget-modal.set-aria-label', $scope.data.f.title);
   }
+	
+	glideUserSession.loadCurrentUser().then(function(currentUser){
+		c.isInternal = false;
+		if(currentUser.hasRole('itil')){
+			c.isInternal=true;
+		}
+	});
+	
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>&#13;
@@ -425,8 +438,6 @@
 	data.emptyStateTemplate = options.empty_state_template;
 	data.disableUIActions = options.disableUIActions === "true";
 	data.hideRelatedLists = options.hideRelatedLists || false;
-	data.hideRelatedLists=false;
-	console.log("Test:" + data.hideRelatedLists );
 
 	if (input) {
 		data.table = input.table;
@@ -444,42 +455,27 @@
 		data.table = options.table || $sp.getParameter("t") || $sp.getParameter("table") || $sp.getParameter("sl_table");
 		data.sys_id = options.sys_id || $sp.getParameter("sys_id") || $sp.getParameter("sl_sys_id") || "-1";
 		data.view = options.view || $sp.getParameter("view") || $sp.getParameter("v"); // no default
+		if(!gs.getUser().hasRole('itil')){
+			data.view= 'ess';
+		}
 	}
+	
+	
 	data.query = $sp.getParameter("query") || options.query || "";
 	data.f = {};
-//	console.log("table:" + data.table);
-//	if (!data.table)
-	//	return;
-	
-	// Form widget is not a supported way to view an attachment
-//	if (data.table == "sys_attachment") {
-		data.tableUnsupported = false;
-	//	return;
-//	}
 
+
+	//-	data.tableUnsupported = false;
 	
 	data.tableUnsupported=true;
-	//if (!GlideTableDescriptor.isValid(data.table))
-		//return;
-	//if (!data.sys_id)
-	//	return;
-	//var rec= $sp.getRecord("u_mst_invoice", "0932acf6db14c340f20cf209af961956");
-
-	//console.log("Rec:" + rec.getLabel());
-	  data.isValid =true;// rec.isValid() || data.sys_id == "-1";
-		//console.log("Before:" + data.sys_id);
-
-	//if (!data.isValid)
-	//	return;
-
-	//data.table = "incident";
-	//data.tableHierarchy = GlideDBObjectManager.getTables(data.table).toArray().join();
-	//data.canWrite = rec.canWrite();
-	var hasRecordAccess = true;//data.sys_id == "-1" ? rec.canCreate() : data.canWrite;
-	data.canAttach = true; //hasRecordAccess && gs.hasRole(gs.getProperty('glide.attachment.role')) /*&& !GlideTableDescriptor.get(data.table).getED().getBooleanAttribute("no_attachment");*/
-	data.f = $sp.getForm(data.table, data.sys_id, data.query, data.view);
-//console.log(data.f);
 	
+	  data.isValid =true;
+	var hasRecordAccess = true;//data.sys_id == "-1" ? rec.canCreate() : data.canWrite;
+	data.canAttach = true; //hasRecordAccess && gs.hasRole(gs.getProperty('glide.attachment.role')) /*&& 
+	console.log("view:" + data.view);
+	data.f = $sp.getForm(data.table, data.sys_id, data.query, data.view);
+	
+
 	// Activity formatter is hardcoded to set specific options
 	for (var f in data.f._formatters) {
 		var fm = data.f._formatters[f];
@@ -510,7 +506,7 @@
         <sys_created_on>2019-09-26 06:57:10</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>151f11fedbcc845063599017db961949</sys_id>
-        <sys_mod_count>97</sys_mod_count>
+        <sys_mod_count>123</sys_mod_count>
         <sys_name>RSP  Form Widget</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -518,9 +514,8 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_151f11fedbcc845063599017db961949</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-06 15:53:24</sys_updated_on>
-        <template><![CDATA[ 
-<div ng-if="::!data.isValid && !data.emptyStateTemplate" class="panel panel-default">
+        <sys_updated_on>2019-10-08 11:46:34</sys_updated_on>
+        <template><![CDATA[<div ng-if="::!data.isValid && !data.emptyStateTemplate" class="panel panel-default">
   <div class="panel-body wrapper-lg text-center">
     <span ng-if="!data.tableUnsupported">${Record not found}</span>
     <span ng-if="data.tableUnsupported">${Form view not supported for requested table}</span>
@@ -544,7 +539,7 @@
       </div>
     </div>
   </div>
-
+  
   <div ng-show="isPageReady" class="panel panel-default" ng-if="::data.f._view.length || !data.hideRelatedLists" >
     <div class="panel-heading" ng-if="data.f.title.length" sp-context-menu="getUIActionContextMenu(event)">
       	<span class="dropdown m-r-xs" ng-if="(data.isAdmin || getUIActions('context').length > 0) && options.omitHeaderOptions != 'true'">
@@ -593,8 +588,8 @@
         </div>
       </div>
       <!-- related lists -->
-      <div ng-if="!data.hideRelatedLists">
-        <label style="margin: 0">${Related Lists}</label>
+      <div ng-if="!data.hideRelatedLists && c.isInternal">
+        <label style="margin: 0">Related Lists..</label>
         <div style="margin-bottom: 7px; padding-bottom: 7px; border-bottom: 1px solid #f5f5f5;">
           <span ng-repeat="rl in data.f._related_lists" ng-if="rl.visible">
             <a ng-if="rl.type != 'REL'" ng-href="?id=lf&table={{::rl.table}}&filter={{rl.field}}%3D{{data.f.sys_id}}&view={{data.f.view}}" 
