@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+  /* widget controller */
+  var c = this;
+	
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>span{&#13;
+font-size:50px;&#13;
+color:#CF142B;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>rsp-reports-data</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+        <name> RSP reports data</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.companyId = gs.getUser().getCompanyID();
+	data.urlPrefix = gs.getProperty('glide.servlet.uri');
+	data.isItilUser = false;
+	
+	if(gs.getUser().hasRole('itil'))
+		{
+			data.isItilUser=true;
+		}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-31 04:50:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a5a15986db7c04506d7070e21f961980</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name> RSP reports data</sys_name>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>sp_widget_a5a15986db7c04506d7070e21f961980</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-11-07 05:22:33</sys_updated_on>
+        <template><![CDATA[<div class="row">
+
+<div class="col-md-4 ">
+  
+ 
+       <a href="{{data.urlPrefix}}rsp?id=pr_lm_charts_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}"  target="_blank">
+   <span class="fa fa-stack fa-1x icon-menuButton" >
+         <i class="fa fa-square fa-stack-2x"></i>
+         <i class="fa fa-lastfm fa-stack-1x fa-inverse" 
+            rel="tooltip" title="LogicMonitor" aria-hidden="true" ></i>     
+         </span> Logic Monitor
+    </a>      
+</div>
+
+<div class="col-md-4">
+  <a href="{{data.urlPrefix}}rsp/?id=pr_solarwindsserver_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+<span class="fa fa-stack fa-1x icon-menuButton">
+         <i class="fa fa-square fa-stack-2x"></i>
+         <i class="fa fa-laptop fa-stack-1x fa-inverse"  rel="tooltip" title="Server Utilization" aria-hidden="true" ></i>
+         </span>Server Utilization
+  </a>
+</div>
+
+<div class="col-md-4">
+  <a href="{{data.urlPrefix}}rsp/solarwindswan_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+  <span class="fa fa-stack fa-1x icon-menuButton">
+         <i class="fa fa-square fa-stack-2x"></i>
+         <i class="fa fa-cubes fa-stack-1x fa-inverse"  rel="tooltip" title="WAN Utilization"  aria-hidden="true"></i>
+         </span>WAN Utilization
+  </a>
+</div>
+
+  </div>
+  
+
+<div class="row">
+<div class="col-md-4">
+  <a href="{{data.urlPrefix}}rsp/?id=pr_evault_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+   <span class="fa fa-stack fa-1x icon-menuButton">
+         <i class="fa fa-square fa-stack-2x"></i>
+         <i class="fa fa-history fa-stack-1x fa-inverse"  rel="tooltip" title="Server Backup Status" aria-hidden="true"></i>
+         </span>Server Backup Status
+    </a>
+</div>
+  
+
+
+
+<div class="col-md-4">
+  <a href="{{data.urlPrefix}}rsp/?id=pr_connected_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.compamyId}}" target="_blank">
+   <span class="fa fa-stack fa-1x icon-menuButton">
+         <i class="fa fa-square fa-stack-2x"></i>
+         <i class="fa fa-shield fa-stack-1x fa-inverse"  rel="tooltip" title="Workstation Backup Status"  aria-hidden="true"></i>
+         </span>Workstation Backup Status  
+  </a>
+</div>
+
+
+  <div id='li_evaultApp' class="col-md-4" ng-if="data.isItilUser">
+	<a href="{{data.urlPrefix}}rsp/?id=pr_evaultapp_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+    <span class="fa fa-stack fa-1x icon-menuButton">
+         <i class="fa fa-square fa-stack-2x"></i>
+         <i class="fa fa-calculator fa-stack-1x fa-inverse"  rel="tooltip" title="EvaultApp" aria-hidden="true"></i>
+         </span>EvaultApp
+    </a>
+      </div>
+  
+<div id='li_evaultCaseMgmt' class="col-md-4" ng-if="data.isItilUser">
+  <a href="{{data.urlPrefix}}rsp/?id=pr_evaultcasemgmt_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+         <span class="fa fa-stack fa-1x icon-menuButton">
+         <i class="fa fa-square fa-stack-2x"></i>
+         <i class="fa fa-check-square-o fa-stack-1x fa-inverse"  rel="tooltip" title="Evault Case Management"  aria-hidden="true"></i>            
+         </span>Evault Case Management
+  </a>
+</div>
+
+      <div id='li_commvaultCaseMgmt' class="col-md-4" ng-if="data.isItilUser">
+		<a href="{{data.urlPrefix}}rsp/?id=pr_commvaultcasemanagement&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+         <span class="fa fa-stack fa-1x icon-menuButton">
+         <i class="fa fa-square fa-stack-2x"></i>
+         <i class="fa fa-key fa-stack-1x fa-inverse" id='CommvaultCaseMgmt' rel="tooltip" title="Commvault Backup Status" aria-hidden="true"></i>
+         </span>Commvault Case Management
+        </a>
+      </div>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

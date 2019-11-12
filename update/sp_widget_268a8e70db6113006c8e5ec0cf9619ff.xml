@@ -677,8 +677,7 @@ tbody tr:last-child {&#13;
 	var sp_page = $sp.getValue('sp_page');	
 
 	data.view = data.view || 'mobile';
-	data.table = data.table || $sp.getValue('table');
-	console.log("Table:" + data.table);
+	data.table = data.table || $sp.getValue('table');	
 	data.filter = data.filter || $sp.getValue('filter');
 	data.keywords = data.keywords || $sp.getValue('keywords');
 	data.p = data.p || $sp.getValue('p') || 1;
@@ -792,9 +791,12 @@ tbody tr:last-child {&#13;
 		record.sys_id = gr.getValue('sys_id');
 		data.list.push(record);
 	}
+console.log("data.filter");
+	console.log(data);
 
-	var breadcrumbWidgetParams = { table: data.table, query: data.filter };
-	data.filterBreadcrumbs = $sp.getWidget('widget-filter-breadcrumbs', breadcrumbWidgetParams);
+	var breadcrumbWidgetParams = { table: data.table, query: data.filter ,enable_filter: true};
+	
+	data.filterBreadcrumbs = $sp.getWidget('rsp-filter-breadcrumbs', breadcrumbWidgetParams);
 
 	// copy to data from input or options
 	function optCopy(names) {
@@ -822,7 +824,7 @@ tbody tr:last-child {&#13;
         <sys_created_on>2018-04-16 05:59:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>268a8e70db6113006c8e5ec0cf9619ff</sys_id>
-        <sys_mod_count>108</sys_mod_count>
+        <sys_mod_count>117</sys_mod_count>
         <sys_name>RSP  Data Table</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -830,7 +832,7 @@ tbody tr:last-child {&#13;
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_268a8e70db6113006c8e5ec0cf9619ff</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-03 00:42:32</sys_updated_on>
+        <sys_updated_on>2019-11-06 08:03:32</sys_updated_on>
         <template><![CDATA[<div  class="row ricoh-panel" ng-init="c.init()">
       <widget id="breadcrumbs"></widget>
   		<div class="col-xs-9 col-sm-8 col-md-5 col-lg-4" ng-include="'rspKeywordSearch'">         

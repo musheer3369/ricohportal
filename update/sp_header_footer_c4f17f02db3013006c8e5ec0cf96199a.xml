@@ -12,7 +12,17 @@
 	});
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>.navbar-toggle.pull-left {&#13;
+        <css>  .xvnavbar-nav {&#13;
+   &#13;
+    text-align: center;&#13;
+    &gt; li {&#13;
+      float: none;&#13;
+      display: inline-block;&#13;
+    }&#13;
+  }&#13;
+&#13;
+&#13;
+.navbar-toggle.pull-left {&#13;
   margin-left: 15px;&#13;
 }&#13;
 @media (min-width: 768px) {&#13;
@@ -26,9 +36,9 @@
     color:#ffffff;&#13;
 }&#13;
 .header-loader{ &#13;
-  float:left;&#13;
+ &#13;
 	width:50px;&#13;
-  position:relative:&#13;
+ &#13;
     top:24px;&#13;
 }</css>
         <data_table>sp_instance</data_table>
@@ -74,7 +84,7 @@
         <sys_created_on>2018-03-14 03:56:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c4f17f02db3013006c8e5ec0cf96199a</sys_id>
-        <sys_mod_count>73</sys_mod_count>
+        <sys_mod_count>126</sys_mod_count>
         <sys_name>RSP Header</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -82,7 +92,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_header_footer_c4f17f02db3013006c8e5ec0cf96199a</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-02 23:49:12</sys_updated_on>
+        <sys_updated_on>2019-11-07 05:42:01</sys_updated_on>
         <template><![CDATA[<div class="white-backdrop">
   <div class="container-fluid">
     <div class="row" >
@@ -92,19 +102,35 @@
             <img style="max-width:300px" class="img-responsive" alt="Responsive image"
                  ng-if="portal.logo" ng-src="{{portal.logo}}"  />
 
-          </a>        
-         </div>
-      	          
-            <div class="text-center">
-                <div class="header-loader" ng-show="loadingIndicator" >
-                  <div class="hidden-xs  la-sm">
-                    <img src="rsp-loader.svg" class="loading-spinner" width="50px" height="50px"/>
-                  </div>          	          
-                </div> 
+          </a>  
+      </div>
+      	 
+                
+            <div class="text-center col-md-8" style="text-align:bottom" >
+            
+              		   <div  style="float:left" ng-show="loadingIndicator" >
+              	    		<div class="hidden-xs  la-sm">
+                		    <img src="rsp-loader.svg" class="loading-spinner" width="50px" height="50px"/>
+                  			</div>          	          
+                	  </div>  
+
+         
+                
+                           <button type="button" class="btn btn-chat" >
+                             <i class="fa fa-comment-o" aria-hidden="true"></i> 
+                                     <a  style="color:white"
+           href="https://chat.mindSHIFT.Com/msChat/servlet/AppMain?__lCMD=newchat&__lSCRIPT=msGetChatOriginDetails:1&__lSCRIPT=msMapChatQueueName:2&crmContactId={{userID}}&SPURL=p.mindshift.com&LAUNCH_LINK={{docLoc}}" target="_blank">
+          <b>Chat Now</b> with Customer Care</a>
+              
+              </button>
+
+                                   
              </div>
       
-          <div class="text-right " style="padding:20px">
-            <button type="button" class="btn btn-chat" > <i class="fa fa-comment-o" aria-hidden="true"></i> Chat Now with Customer Care</button>
+          <div class="text-right col-md-2 " style="padding:5px">
+             
+         <!--   <button type="button" class="btn btn-chat" > <i class="fa fa-comment-o" aria-hidden="true"></i> Chat Now with Customer Care</button>-->
+            <img src="mst-ricoh.png" width="200" height="54"/>
           </div>
     </div>
   </div>
@@ -132,27 +158,34 @@
     
     </div>
     <div class="collapse navbar-collapse" id="collapseRight">
-      <ul class="nav navbar-nav">
-    		  <li ng-repeat="item in data.menu.items" ng-class="{dropdown:item.items.length >0}" 
-                  ng-include="'ricoh-nav-template'" class="menu-link">      
-     		 </li>	
-  		</ul>
+     
+        			 <ul class="nav navbar-nav pull-left">
+                  <li ng-repeat="item in data.menu.items" ng-class="{dropdown:item.items.length >0}" 
+                          ng-include="'ricoh-nav-template'" class="menu-link ">      
+                 </li>	
+         			 </ul>  
+       
+      
+                        <ul class="nav navbar-nav navbar-right pull-right">
+                 <li class="dropdown ">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                     <span class="glyphicon glyphicon-user"></span>
+                     <small>Logged in as</small> <strong>{{::user.name}}</strong>
+                     <span class="glyphicon glyphicon-chevron-down"></span>
+                   </a>
+                   <ul class="dropdown-menu">             	
+                    <li ><a href="{{::url_suffix}}?id=pr_changepassword">${Change Password}</a>
+                    <li><a href="{{::url_suffix}}?id=sc_cat_item&sys_id=bf029e69dbea62806d7070e21f9619be&targetuser={{::user.sys_id}}">${Edit Contact Info}</a></li>         
+                    <li><a href="{{::portal.logoutUrl}}">${Logout}</a></li>
+                   </ul>
+                </li>
+              </ul>
+       
+      </div>
     
       
-      <ul class="nav navbar-nav navbar-right">
-         <li class="dropdown">
-           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-             <span class="glyphicon glyphicon-user"></span>
-             <small>Logged in as</small> <strong>{{::user.name}}</strong>
-             <span class="glyphicon glyphicon-chevron-down"></span>
-           </a>
-           <ul class="dropdown-menu">             	
-            <li><a href="{{::url_suffix}}?id=pr_changepassword">${Change Password}</a>
-            <li><a href="{{::url_suffix}}?id=sc_cat_item&sys_id=bf029e69dbea62806d7070e21f9619be&targetuser={{::user.sys_id}}">${Edit Contact Info}</a></li>         
-            <li><a href="{{::portal.logoutUrl}}">${Logout}</a></li>
-           </ul>
-        </li>
-      </ul>
+      
+    
     </div>  
   </div>
     

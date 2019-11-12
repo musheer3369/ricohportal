@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="09ad955cdb8d88106d7070e21f96199b" sys_domain="8eba0beedb423200ddad70e21f9619df" table="sc_cat_item_producer" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+            <sys_created_on>2019-11-07 05:28:52</sys_created_on>
+            <sys_domain>774190f01f1310005a3637b8ec8b70ef</sys_domain>
+            <sys_domain_path>!!!/</sys_domain_path>
+            <sys_id>95ad955cdb8d88106d7070e21f9619b1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sc_cat_item_producer" name="sc_cat_item_producer" sys_domain="8eba0beedb423200ddad70e21f9619df" view="7966be310a0a0b8c00bd504090503227">09ad955cdb8d88106d7070e21f96199b</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="sc_cat_item_producer" sys_domain="774190f01f1310005a3637b8ec8b70ef" view="7966be310a0a0b8c00bd504090503227">c5ad955cdb8d88106d7070e21f96199d</sys_ui_section>
+            <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+            <sys_updated_on>2019-11-07 05:28:52</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+            <sys_created_on>2019-11-07 05:28:52</sys_created_on>
+            <sys_domain>774190f01f1310005a3637b8ec8b70ef</sys_domain>
+            <sys_domain_path>!!!/</sys_domain_path>
+            <sys_id>11ad955cdb8d88106d7070e21f9619b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sc_cat_item_producer" name="sc_cat_item_producer" sys_domain="8eba0beedb423200ddad70e21f9619df" view="7966be310a0a0b8c00bd504090503227">09ad955cdb8d88106d7070e21f96199b</sys_ui_form>
+            <sys_ui_section caption="Mobile" display_value="Mobile" name="sc_cat_item_producer" sys_domain="8eba0beedb423200ddad70e21f9619df" view="7966be310a0a0b8c00bd504090503227">d9ad955cdb8d88106d7070e21f9619b2</sys_ui_section>
+            <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+            <sys_updated_on>2019-11-07 05:28:52</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>sc_cat_item_producer</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+            <sys_created_on>2019-11-07 05:28:52</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>8eba0beedb423200ddad70e21f9619df</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!!/!!!/</sys_domain_path>
+            <sys_id>09ad955cdb8d88106d7070e21f96199b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sc_cat_item_producer</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+            <sys_update_name>sys_ui_form_sections_09ad955cdb8d88106d7070e21f96199b</sys_update_name>
+            <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+            <sys_updated_on>2019-11-07 05:28:52</sys_updated_on>
+            <sys_user/>
+            <view display_value="Advanced" name="advanced">7966be310a0a0b8c00bd504090503227</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

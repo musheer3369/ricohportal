@@ -40,7 +40,7 @@
         <order>135</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
-        <question_text>CI Category</question_text>
+        <question_text>Device Category</question_text>
         <read_roles/>
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
@@ -60,15 +60,15 @@
         <sys_created_on>2018-03-22 05:57:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6e1a59b4db0113006c8e5ec0cf961937</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>CI Category</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Device Category</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>item_option_new_6e1a59b4db0113006c8e5ec0cf961937</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-07-26 20:06:26</sys_updated_on>
+        <sys_updated_on>2019-11-07 05:29:56</sys_updated_on>
         <table/>
         <tooltip/>
         <type>5</type>

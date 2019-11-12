@@ -12,34 +12,34 @@
         <kb_article/>
         <kb_category/>
         <kb_topic/>
-        <label>Request Now</label>
+        <label>Monitoring Reports</label>
         <order>100</order>
         <record_script/>
         <sc_cat_item/>
         <sc_category/>
         <short_description/>
-        <sp_page/>
+        <sp_page display_value="rsp_reports_data">a332d10adb7c04506d7070e21f9619c3</sp_page>
         <sp_rectangle_menu/>
-        <sp_rectangle_menu_item display_value="Get Support Now">f9fed9dadbf013006c8e5ec0cf9619c0</sp_rectangle_menu_item>
+        <sp_rectangle_menu_item display_value="Quick Links">4d3fdd5edb7013006c8e5ec0cf9619f5</sp_rectangle_menu_item>
         <sys_class_name>sp_rectangle_menu_item</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-03-14 11:57:09</sys_created_on>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-10-31 05:07:10</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>93bf511edbf013006c8e5ec0cf96190d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Request Now</sys_name>
+        <sys_id>2d7551c2dbbc04506d7070e21f961949</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Monitoring Reports</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
-        <sys_update_name>sp_rectangle_menu_item_93bf511edbf013006c8e5ec0cf96190d</sys_update_name>
+        <sys_update_name>sp_rectangle_menu_item_2d7551c2dbbc04506d7070e21f961949</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-31 06:53:29</sys_updated_on>
+        <sys_updated_on>2019-10-31 05:07:10</sys_updated_on>
         <table/>
-        <type>url</type>
+        <type>page</type>
         <u_block_image/>
-        <url>rsp?id=rsp_sc_category&amp;sys_id=262c56bddbe222005524fbec0f961916&amp;catalog_id=-1</url>
+        <url/>
         <url_target/>
     </sp_rectangle_menu_item>
-    <sys_translated_text action="delete_multiple" query="documentkey=93bf511edbf013006c8e5ec0cf96190d"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=2d7551c2dbbc04506d7070e21f961949"/>
 </record_update>
