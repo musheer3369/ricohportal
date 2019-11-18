@@ -530,6 +530,44 @@ ul {
 	data.hasReadableJournalField = false;
 	if (data.canRead && !data.isNewRecord) {
 		data.stream = $sp.getStream(data.table, data.sys_id);
+		
+			/////
+		var mailgr = new GlideRecord('sys_email');
+		mailgr.addQuery('instance',data.sys_id);
+		mailgr.query();
+		
+		while (mailgr.next()) {
+			var tempobj = {};
+			tempobj.element = "comments";
+			tempobj.field_label = "Additional comments";
+			tempobj.sys_created_on = mailgr.sys_created_on.toString();
+			tempobj.sys_created_on_adjusted = mailgr.sys_created_on.getDisplayValue().toString();
+			tempobj.sys_id = mailgr.sys_id.toString();
+			tempobj.user_sys_id = 'system';
+			tempobj.name = "system";
+			if (/*mailgr.sys_created_by != 'system' || mailgr.mailbox.getDisplayValue() == "Received"*/ true) { 
+				//This filters the creation mail and other assignment group mails etc...
+				var usergr = new GlideRecord('sys_user');
+				usergr.addQuery('user_name',mailgr.sys_created_by.toString());
+				usergr.query();
+				if (usergr.next()) {
+					tempobj.user_sys_id = usergr.sys_id.toString();
+					tempobj.name = usergr.name.toString();
+				}
+				var mailtype = "";
+				if (mailgr.mailbox.getDisplayValue() == 'Sent') mailtype = "<strong>Sent email:</strong> \n";
+				else mailtype = "<strong>Received email:</strong> \n";
+				tempobj.value = mailtype + mailgr.body.toString();				
+				data.stream.entries.push(tempobj);
+			}
+// 			else {
+// 				tempobj.user_sys_id = '';
+// 				tempobj.name = "system";
+// 			}
+			
+		}
+		data.stream.entries.sort(function(a,b) {return (a.sys_created_on_adjusted < b.sys_created_on_adjusted) ? 1 : ((b.sys_created_on_adjusted < a.sys_created_on_adjusted) ? -1 : 0);} );
+		//////
 		// Journal fields come in correct order already
 		// so grab the first 2 writeable fields
 		if ('journal_fields' in data.stream) {
@@ -560,7 +598,7 @@ ul {
         <sys_created_on>2019-09-30 12:54:35</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fb379fc8db1808d06d7070e21f9619fa</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>RSP Ticket Conversation</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -568,7 +606,7 @@ ul {
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_fb379fc8db1808d06d7070e21f9619fa</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-08 06:49:32</sys_updated_on>
+        <sys_updated_on>2019-11-15 11:28:47</sys_updated_on>
         <template><![CDATA[<div>
   <div ng-if="!data.canRead && !data.isNewRecord">
     ${Requested record not found}

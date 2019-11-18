@@ -124,10 +124,10 @@
 		
 	var table = options.table ;	
 	
-	var query = options.query  || "";
+	var query = options.query  || "";	
+	
 	data.breadcrumbs = $sp.getFilterBreadcrumbs(table, query, null);
 	data.enable_filter = true;//input.enable_filter || options.enable_filter == true || options.enable_filter == "true";
-
 	if (data.enable_filter)
 		data.filterWidget = $sp.getWidget('rsp-incident-sn-desktop-filter', {
 			table: table,
@@ -141,7 +141,7 @@
         <sys_created_on>2019-11-06 05:00:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d9ad80c0db0908106d7070e21f961983</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>RSP  Filter Breadcrumbs</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -149,16 +149,15 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_d9ad80c0db0908106d7070e21f961983</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-11-06 08:00:04</sys_updated_on>
-        <template><![CDATA[<div class="breadcrumbs">
+        <sys_updated_on>2019-11-12 17:21:17</sys_updated_on>
+        <template><![CDATA[<div class="breadcrumbs"> 
   <button type="button"
-          role="button"
-          ng-show="data.enable_filter"
+          role="button"         
           ng-click="clickFilter()"
           title="Show / hide filter"
           class="icon-filter btn btn-link"
           tabindex="0"
-          data-original-title="Show / hide filter"><span class="sr-only">${Show / hide filter}</span></button>
+          data-original-title="Show / hide filter"><span class="sr-only">${Show / hide filter}</span> </button>
   <span ng-repeat="crumb in data.breadcrumbs track by crumb.value">
     <a href="javascript:void(0)" ng-if="!$first" class="sp-breadcrumb-link sp-breadcrumb-remove-condition" ng-click="adjustFilter(crumb, true)">&gt;</a>
     <a href="javascript:void(0)" class="sp-breadcrumb-link" ng-click="adjustFilter(crumb, false)">{{crumb.label}}</a>
@@ -166,7 +165,7 @@
 </div>
 
 <div >
-  <span ng-show="showFilter">
+  <span  ng-show="showFilter">
     <sp-widget widget="data.filterWidget"></sp-widget>
   </span>
 </div>]]></template>

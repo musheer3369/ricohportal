@@ -8,12 +8,40 @@
 	c.config = {
 		saveFilter:false,loadFilter:false,
 		outputType: "encoded_query",
-		fieldList:  ["caller_id","number","opened_by","company","active","state","short_description","contact_type","parent_incident","sys_updated_on","opened_at","closed_at"],		closeFilter: true,
+		fieldList:  getFieldList(),
+		closeFilter: true,
 		encodedQuery: massageEncodedQuery(c.data.initialQuery),
 		manageFiltersLink: "?id=lf&table=sys_filter",
 		dotWalking:false
 		
 	};
+	
+	function getFieldList()
+	{
+		if(c.data.table == 'incident')
+			{
+				return ["caller_id","number","opened_by","company","active",
+					 "state","short_description","contact_type",
+					 "parent_incident","sys_updated_on","opened_at","closed_at"];
+			}
+		else if(c.data.table == 'cmdb_ci_computer')
+			{
+				return ["name","serial_number","model_id","computer","install_status","sys_class_name","warranty_expiration","company"];
+			}
+		else if(c.data.table == 'cmdb_ci_server')
+			{
+				return ["name","serial_number","model_id","computer","install_status","sys_class_name","warranty_expiration","company"];
+			}
+		else if(c.data.table == 'cmdb_ci_netgear')
+			{
+				return ["name","serial_number","model_id","computer","install_status","sys_class_name","warranty_expiration","company"];
+			}
+		else if(c.data.table == 'sc_request'){
+			return ["caller_id","number","opened_by","company","active",
+					 "state","short_description","contact_type",
+					 "parent_incident","sys_updated_on","opened_at","closed_at"];
+		}
+	}
 
 	function massageEncodedQuery(encodedQuery) {
 		return (encodedQuery) ? encodedQuery.replace(/CONTAINS/g, "LIKE").replace(/DOES NOT CONTAIN/g, "NOT LIKE") : encodedQuery;
@@ -38,7 +66,8 @@
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
 	data.table =  options.table || $sp.getParameter("table");		
-	data.initialQuery =  options.initialQuery || $sp.getParameter("filter");
+	data.initialQuery =  options.initialQuery || $sp.getParameter("filter");	
+	
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -46,7 +75,7 @@
         <sys_created_on>2019-11-06 06:28:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cb91e800db8908106d7070e21f961919</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>RSP Incident SN Desktop Filter</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -54,7 +83,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_cb91e800db8908106d7070e21f961919</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-11-06 07:59:18</sys_updated_on>
+        <sys_updated_on>2019-11-14 13:10:43</sys_updated_on>
         <template><![CDATA[<div>
 	<sn-filter-widget uid="c.data.table" table="{{c.data.table}}" filter-config="c.config" />
 </div>]]></template>

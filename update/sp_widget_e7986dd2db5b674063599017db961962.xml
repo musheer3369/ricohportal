@@ -42,7 +42,7 @@
         <sys_created_on>2019-01-31 15:24:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e7986dd2db5b674063599017db961962</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>RSP Data Now Widget</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -50,7 +50,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_e7986dd2db5b674063599017db961962</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-11-07 05:19:32</sys_updated_on>
+        <sys_updated_on>2019-11-12 02:30:16</sys_updated_on>
         <template><![CDATA[<div> 
     <h3>Data Now </h3>  
 </div> 
@@ -59,13 +59,14 @@
   <div ng-show="data.isPoc || data.isItilUser" class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMyAssets'">
   
   </div>
-  <div ng-show="data.isPoc || data.isItilUser" class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMyReports'">  
-  </div>  
-</div> 
-<div class="row">
   <div class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMySurveys'">
   
   </div>
+</div> 
+<div class="row">
+  <div ng-show="data.isPoc || data.isItilUser" class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMyReports'">  
+  </div>  
+  
   <div ng-show="data.isPoc || data.isItilUser" class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpMyMonitoringReports'">  
   </div>  
 </div> ]]></template>

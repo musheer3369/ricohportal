@@ -7,7 +7,7 @@
         <sys_created_on>2018-03-14 06:34:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6f065c5adb7013006c8e5ec0cf961990</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>tmpWelcome</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -15,13 +15,13 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_ng_template_6f065c5adb7013006c8e5ec0cf961990</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-17 01:04:26</sys_updated_on>
+        <sys_updated_on>2019-11-12 13:08:04</sys_updated_on>
         <template><![CDATA[<p><strong>Welcome to the Ricoh IT Services Support Portal.</strong></p>
             <p>This portal is available to you 24x7x365.</p>
 
-              <p>Create,submit,manage and track your Support incidents and 
-                requests.Also access your organization's account information.</p>
-				<p>If you require additional information,please call or email your Support Team or Account Manager.</p>				
+              <p>Create, submit, manage and track your Support incidents and 
+                requests. Also access your organization's account information.</p>
+				<p>If you require additional information, please call or email your Support Team or Account Manager.</p>				
             <p>Thank you</p>]]></template>
     </sp_ng_template>
 </record_update>

@@ -655,6 +655,7 @@ tbody tr:last-child {&#13;
 		else
 			data.fields = $sp.getListColumns(data.table);
 	}
+
 	var sp_page = $sp.getValue('sp_page');	
 
 	data.view = data.view || 'mobile';
@@ -721,7 +722,7 @@ tbody tr:last-child {&#13;
 		}
 	// filter exclude from portal
 	//gr.addQuery("u_non_service_portal","false");	
-	console.log(gr.getEncodedQuery());
+
 	gr._query();
 
 	data.row_count = gr.getRowCount();
@@ -763,8 +764,8 @@ tbody tr:last-child {&#13;
 		data.list.push(record);
 	}
 
-	var breadcrumbWidgetParams = { table: data.table, query: data.filter };
-	data.filterBreadcrumbs = $sp.getWidget('widget-filter-breadcrumbs', breadcrumbWidgetParams);
+	var breadcrumbWidgetParams = { table: data.table, query: data.filter,enable_filter:true };	
+	data.filterBreadcrumbs = $sp.getWidget('rsp-filter-breadcrumbs', breadcrumbWidgetParams);
 
 	// copy to data from input or options
 	function optCopy(names) {
@@ -781,7 +782,7 @@ tbody tr:last-child {&#13;
 		gr.addEncodedQuery("sys_domain!=global^ORsys_domain=NULL");
 		//gr.addEncodedQuery("sys_id!=" + gs.getUser().getCompanyID() );
 		gr.query();		
-		console.log("Visibile Accounts:"  + gr.getRowCount());
+		//console.log("Visibile Accounts:"  + gr.getRowCount());
 		return gr.getRowCount();
 	}
 
@@ -792,7 +793,7 @@ tbody tr:last-child {&#13;
         <sys_created_on>2019-08-20 13:44:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f8999c83db17330063599017db961963</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>Copy of RSP  Data Table</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -800,21 +801,22 @@ tbody tr:last-child {&#13;
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_f8999c83db17330063599017db961963</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-08-21 04:52:24</sys_updated_on>
+        <sys_updated_on>2019-11-14 13:13:05</sys_updated_on>
         <template><![CDATA[<div  class="row ricoh-panel" ng-init="c.init()">
-      <widget id="breadcrumbs"></widget>
+    <!--  <widget id="breadcrumbs"></widget>-->
   		<div class="col-xs-9 col-sm-8 col-md-5 col-lg-4">         
   		</div>    
-        <div class="pull-right-sm col-xs-9 col-sm-8 col-md-5 col-lg-4" >
+        <div class="pull-right-sm col-xs-9 col-sm-8 col-md-5 col-lg-4" ng-hide="true" >
          <select id="my-accounts" multiple>
           </select>
         </div>        
 </div>  
 
-  <div class="ricoh-panel  b">      
+  <div class="ricoh-panel  b">   
     <!-- body -->
     <div class="panel-body">
-          <div class="well well-sm">            
+          <div class="well well-sm">      
+                    
         		<span class="dropdown m-r-xs">
                     <span class="dropdown-toggle glyphicon glyphicon-menu-hamburger" style="line-height: 1.4em" 
                             id="optionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -828,10 +830,11 @@ tbody tr:last-child {&#13;
                   </span>
                   <span class="panel-title">
                      <i ng-if="options.glyph" class="fa fa-{{options.glyph}} m-r"></i>{{data.short_description }}
-                  </span>           		 
+                  </span> 
+            
           </div>   
       
-      <div  class="filter-breadcrumbs">
+      <div class="filter-breadcrumbs" >
 	   			 <sp-widget widget="data.filterBreadcrumbs"></sp-widget>
     		  </div>
       
