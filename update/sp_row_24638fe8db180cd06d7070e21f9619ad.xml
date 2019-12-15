@@ -3,7 +3,7 @@
         <class_name/>
         <order>1</order>
         <sp_column/>
-        <sp_container display_value="RSP Service Catalog  - Container 1">ac638fe8db180cd06d7070e21f9619aa</sp_container>
+        <sp_container display_value="Service Catalog  Item - Container 1">ac638fe8db180cd06d7070e21f9619aa</sp_container>
         <sys_class_name>sp_row</sys_class_name>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
         <sys_created_on>2019-10-02 00:44:46</sys_created_on>

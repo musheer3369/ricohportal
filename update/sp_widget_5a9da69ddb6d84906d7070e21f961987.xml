@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>rsp-missing-data</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+        <name>RSP Missing Data</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-12-05 10:24:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5a9da69ddb6d84906d7070e21f961987</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>RSP Missing Data</sys_name>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>sp_widget_5a9da69ddb6d84906d7070e21f961987</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-12-05 10:32:05</sys_updated_on>
+        <template><![CDATA[<div>
+<!-- your widget template -->
+  <h5>If there is no data being displayed on this page, it may be because this isn't a service you currently utilize. If you believe this is an error, please
+  use this  <a href="https://ricohusadev.service-now.com/rsp?id=rsp_request_form&sys_id=814e4f6edb133e806d7070e21f96192d&sysparm_category=262c56bddbe222005524fbec0f961916"><u>Link</u></a> to request further assistance. </h5>
+</div>]]></template>
+    </sp_widget>
+</record_update>

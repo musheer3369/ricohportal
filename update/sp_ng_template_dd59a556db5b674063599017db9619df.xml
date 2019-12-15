@@ -7,7 +7,7 @@
         <sys_created_on>2019-01-31 15:27:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>dd59a556db5b674063599017db9619df</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>tmpMyReports</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -15,13 +15,13 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_ng_template_dd59a556db5b674063599017db9619df</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-08-16 06:56:35</sys_updated_on>
+        <sys_updated_on>2019-11-21 05:36:06</sys_updated_on>
         <template><![CDATA[<div class="media">
   	<div class="media-body" style="background-color:#f3f3f3;padding:15px">
       <h5 class="media-heading">View Reports</h5>
      
      <h3> <a ng-href="/rsp?id=rsp_power_bi_dashboard2">
-       <span class="label label-default" style="background-color:#759B6B;">My Reports</span></a></h3>
+       <span class="label label-default" style="background-color:#759B6B;">Incident Reports</span></a></h3>
       
     </div>
     <div class="media-right media-middle" style="background-color:#759B6B;padding:20px">

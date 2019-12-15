@@ -50,7 +50,7 @@ div{
         <sys_created_on>2019-08-16 08:08:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a1162a6ddb9b334063599017db961951</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_name>RSP Managed Services</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -58,8 +58,11 @@ div{
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_a1162a6ddb9b334063599017db961951</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-08-19 10:13:54</sys_updated_on>
-        <template><![CDATA[<div class="row text-center" >
+        <sys_updated_on>2019-11-26 12:14:28</sys_updated_on>
+        <template><![CDATA[ 
+  
+ <h3> <a href="https://ricohusadev.service-now.com/rsp?id=rsp_request_form&sys_id=814e4f6edb133e806d7070e21f96192d&sysparm_category=262c56bddbe222005524fbec0f961916"><u>Click Here</u></a> to request more information on any of these services. </h3>
+<div class="row text-center" >
   <div class="col-md-2" >
     	<div  style="background-image:url(it_services_bkg.png);min-height:275px">
          <div class="row">
@@ -74,7 +77,7 @@ div{
                 <small>
               Essential to your business.<br>
               Essential to your success.<br>
-              Everything you need,managed<br> by a partner you trust.
+              Everything you need, managed<br> by a partner you trust.
             </small>
             </div>
    
@@ -107,21 +110,21 @@ div{
 
        <div class="row">
           <small>
-         Move to the cloud with confidence.<br>Custom,cloud-based solutions tailored<br> to your business needs.
+         Move to the cloud with confidence.<br>Custom, cloud-based solutions tailored<br> to your business needs.
           </small>
         </div>
         </div>
       <ul>
         <li>cloudSHIFT Hosted Server</li>
         <li>cloudSHIFT Hosted Desktop</li>
-        <li>Co-Location Services</li>
+        <li>Data Center Services</li>
         <li>Load Balancing</li>
         <li>Secure Remote Access</li>
-        <li>Internet and VPN Services</li>
+        <li>Internet and Virtual Private Network Solutions</li>
         <li>Managed Circuits</li>
-        <li>Microsoft 365 / Office365 </li>
+        <li>Microsoft 365 Solutions </li>
         <li>Microsoft Azure</li>
-        <li>Amazon AWS</li>
+        <li>Amazon Web Services</li>
         <li>IMB iSeries AS/400</li>
 
       </ul>
@@ -150,10 +153,10 @@ div{
       
     </div>
     <ul>
-           <li> Hosted Exchange</li>
-      <li>Hosted VoIP</li>
+           <li> Hosted Exchange Email Services</li>
+      <li>Hosted VoIP Telephony Services</li>
       <li>Hosted Fax</li>
-      <li>Hosted SFTP</li>
+      <li>Hosted Secure File Transfer Services</li>
       <li>Email Protection &amp; Continuity</li>
       <li>Email Archiving Services</li>
       <li>DNS and Domain Services</li>
@@ -185,8 +188,8 @@ div{
    
     </div>
     <ul>
-      <li>OS Patching</li>
-        <li>Antivirus / Anti Malware</li>
+      <li>Scheduled Operating Systems Patching</li>
+        <li>Antivirus / Anti-Malware Protection</li>
         <li>Managed Server Backup</li>
         <li>Managed Workstation Backup &amp; Encryption</li>
         <li>Identity Access Management</li>

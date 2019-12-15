@@ -3,7 +3,7 @@
         <class_name/>
         <order>1</order>
         <sp_column/>
-        <sp_container display_value="My Reports - Container 1">5bd0da89db4913006c8e5ec0cf96192e</sp_container>
+        <sp_container display_value="Reports - Container 1">5bd0da89db4913006c8e5ec0cf96192e</sp_container>
         <sys_class_name>sp_row</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-03-23 04:34:43</sys_created_on>

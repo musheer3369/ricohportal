@@ -84,7 +84,7 @@
         <sys_created_on>2018-03-14 03:56:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c4f17f02db3013006c8e5ec0cf96199a</sys_id>
-        <sys_mod_count>144</sys_mod_count>
+        <sys_mod_count>146</sys_mod_count>
         <sys_name>RSP Header</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -92,7 +92,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_header_footer_c4f17f02db3013006c8e5ec0cf96199a</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-11-19 13:53:43</sys_updated_on>
+        <sys_updated_on>2019-11-21 06:08:02</sys_updated_on>
         <template><![CDATA[<div class="white-backdrop">
   <div class="container-fluid">
     <div class="row" >
@@ -120,15 +120,18 @@
       
           <div class="text-right col-md-2 " style="padding-right:5px">
             
-
-            <img src="mst-ricoh.png" width="125" height="30"/><div>
-               <button type="button" class="btn btn-chat btn-xs" >
+          
+           
+            <div> <img src="mst-ricoh.png" width="125" height="30"/>
+              <p> <button type="button" class="btn btn-chat btn-xs" >
                              <i class="fa fa-comment-o" aria-hidden="true"></i> 
                                      <a  style="color:white"
-           href="https://chat.mindSHIFT.Com/msChat/servlet/AppMain?__lCMD=newchat&__lSCRIPT=msGetChatOriginDetails:1&__lSCRIPT=msMapChatQueueName:2&crmContactId={{userID}}&SPURL=p.mindshift.com&LAUNCH_LINK={{docLoc}}" target="_blank">
-          <b>Chat Now</b></a>
+           								href="https://chat.mindSHIFT.Com/msChat/servlet/AppMain?__lCMD=newchat&__lSCRIPT=msGetChatOriginDetails:1&__lSCRIPT=msMapChatQueueName:2&crmContactId={{userID}}&SPURL=p.mindshift.com&LAUNCH_LINK={{docLoc}}" target="_blank">
+          								<b>Chat Now</b></a>
               
-            </button></div>
+                </button></p>
+             
+            </div>
           </div>
     </div>
   </div>

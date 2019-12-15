@@ -17,7 +17,7 @@
         <sys_created_on>2019-08-20 07:42:40</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>07a68f36dbd3fb4063599017db9619fc</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -25,7 +25,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_instance_07a68f36dbd3fb4063599017db9619fc</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-08-21 05:33:21</sys_updated_on>
+        <sys_updated_on>2019-11-21 06:20:42</sys_updated_on>
         <title/>
         <url/>
         <widget_parameters><![CDATA[{
@@ -38,8 +38,8 @@
 		"displayValue": "Workstations"
 	},
 	"table_1_fields": {
-		"value": "name,company,model_id,os,serial_number,warranty_expiration",
-		"displayValue": "name,company,model_id,os,serial_number,warranty_expiration"
+		"value": "name,company,model_id,os,serial_number,warranty_expiration,install_status,u_patch_schedule",
+		"displayValue": "name,company,model_id,os,serial_number,warranty_expiration,install_status,u_patch_schedule"
 	},
 	"table_1_filter": {
 		"value": "sys_class_name=cmdb_ci_computer^install_status!=7",
@@ -54,8 +54,8 @@
 		"displayValue": "Servers"
 	},
 	"table_2_fields": {
-		"value": "name,company,model_id,os,serial_number,warranty_expiration",
-		"displayValue": "name,company,model_id,os,serial_number,warranty_expiration"
+		"value": "name,company,model_id,os,serial_number,warranty_expiration,install_status,u_patch_schedule",
+		"displayValue": "name,company,model_id,os,serial_number,warranty_expiration,install_status,u_patch_schedule"
 	},
 	"table_2_filter": {
 		"value": "GOTOsys_class_nameLIKEserver^install_status!=7",
@@ -70,8 +70,8 @@
 		"displayValue": "Network Gear"
 	},
 	"table_3_fields": {
-		"value": "name,company,model_id,device_type,serial_number,warranty_expiration",
-		"displayValue": "name,company,model_id,device_type,serial_number,warranty_expiration"
+		"value": "name,company,model_id,device_type,serial_number,warranty_expiration,install_status",
+		"displayValue": "name,company,model_id,device_type,serial_number,warranty_expiration,install_status"
 	},
 	"table_3_filter": {
 		"value": "GOTOinstall_status!=7",

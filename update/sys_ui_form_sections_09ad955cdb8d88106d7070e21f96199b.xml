@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="sc_cat_item_producer" name="sc_cat_item_producer" sys_domain="8eba0beedb423200ddad70e21f9619df" view="7966be310a0a0b8c00bd504090503227">09ad955cdb8d88106d7070e21f96199b</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="sc_cat_item_producer" sys_domain="774190f01f1310005a3637b8ec8b70ef" view="7966be310a0a0b8c00bd504090503227">c5ad955cdb8d88106d7070e21f96199d</sys_ui_section>
+            <sys_ui_section display_value="">c5ad955cdb8d88106d7070e21f96199d</sys_ui_section>
             <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
             <sys_updated_on>2019-11-07 05:28:52</sys_updated_on>
         </sys_ui_form_section>
@@ -24,7 +24,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="sc_cat_item_producer" name="sc_cat_item_producer" sys_domain="8eba0beedb423200ddad70e21f9619df" view="7966be310a0a0b8c00bd504090503227">09ad955cdb8d88106d7070e21f96199b</sys_ui_form>
-            <sys_ui_section caption="Mobile" display_value="Mobile" name="sc_cat_item_producer" sys_domain="8eba0beedb423200ddad70e21f9619df" view="7966be310a0a0b8c00bd504090503227">d9ad955cdb8d88106d7070e21f9619b2</sys_ui_section>
+            <sys_ui_section display_value="">d9ad955cdb8d88106d7070e21f9619b2</sys_ui_section>
             <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
             <sys_updated_on>2019-11-07 05:28:52</sys_updated_on>
         </sys_ui_form_section>

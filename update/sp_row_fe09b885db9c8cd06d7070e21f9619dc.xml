@@ -3,7 +3,7 @@
         <class_name/>
         <order>1</order>
         <sp_column/>
-        <sp_container display_value="RSP Invoices - Container 1">cd093485db9c8cd06d7070e21f961921</sp_container>
+        <sp_container display_value="Invoices - Container 1">cd093485db9c8cd06d7070e21f961921</sp_container>
         <sys_class_name>sp_row</sys_class_name>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
         <sys_created_on>2019-10-03 03:57:18</sys_created_on>
