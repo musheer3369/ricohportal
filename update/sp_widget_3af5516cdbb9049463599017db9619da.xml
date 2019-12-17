@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@media only screen and (max-width: 768px) {
+.xcontainer{
+	display: inline;
+ 
+  margin-left:0%;
+  margin-right:0%;
+  margin-top:0%;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+.xcontainer{
+	display: flex;
+  justify-content: center;
+  margin-left:20%;
+  margin-right:20%;
+ margin-top:-20%;
+  z-index:40;
+  position:relative;
+}
+}
+.xcenter {
+  width: 100%; 
+  color: black;
+  font-weight: bold;
+  font-family: Tahoma;
+  text-align:center;
+  padding:10px;
+}
+
+
+h5{
+color:white;
+  font-size:10px;
+}
+
+.img-top{
+  margin-top:-50px;  
+  height:auto;
+  width:100%;
+  z-index:30;
+  position:relative;
+  padding-bottom:20%;
+}
+
+.img-bottom{ 
+  z-index:20;  
+ position:relative;
+  height:auto;
+  width:100%;
+}
+
+.sprite1 {    
+  background: url('icons-its-portal.png') no-repeat -756px -431px;  
+  border:none;
+  outline:none;	
+  margin-left:auto;margin-right:auto;
+  width: 56px;
+	height: 56px;
+}
+.sprite2 {
+	background: url('icons-its-portal.png') no-repeat -918px -107px;
+	width: 56px;
+	height: 56px;
+  border:none;
+  outline:none;	
+  margin-left:auto;margin-right:auto;
+}
+.sprite3 {
+background: url('icons-its-portal.png') no-repeat -107px -275px;
+	width: 56px;
+	height: 56px;
+  border:none;
+  outline:none;	
+  margin-left:auto;margin-right:auto;
+}
+
+.sprite4 {
+	background: url('icons-its-portal.png') no-repeat -513px -431px;
+	width: 56px;
+	height: 56px;
+  border:none;
+  outline:none;	
+  margin-left:auto;margin-right:auto;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>rsp-landing-widget-v2</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+        <name>RSP Landing Widget v2</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2019-12-15 06:21:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3af5516cdbb9049463599017db9619da</sys_id>
+        <sys_mod_count>357</sys_mod_count>
+        <sys_name>RSP Landing Widget v2</sys_name>
+        <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
+        <sys_update_name>sp_widget_3af5516cdbb9049463599017db9619da</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2019-12-17 11:14:40</sys_updated_on>
+        <template><![CDATA[<div  >
+<!-- your widget template -->
+  <div  class="img-top">
+    <img src="portal-landing-top.jpg"  style="width:100%;">       
+   
+           <div class="xcontainer row">
+            <div class=" xcenter col-md-2" style="background-color:#0e5b81;">
+              <a href="rsp?id=incident_form&sys_id=c6961174db0113006c8e5ec0cf9619c5">
+                <div class="sprite1" >      
+                </div>
+                <h5>CREATE NEW INCIDENT	 </h5>  
+              </a>
+             </div>
+              <div class="xcenter col-md-2" style="background-color:#df4b1e;">
+              <a href="rsp?id=rsp_sc_category&sys_id=262c56bddbe222005524fbec0f961916&catalog_id=-1">
+           
+              <div class="sprite2" >      
+              </div>
+              <h5>SUBMIT A NEW REQUEST</h5>  
+                </a>
+             </div>
+              <div class="xcenter col-md-2"  style="background-color:#761ec1;">
+                  <a href="/rsp?id=rsp_data_now">
+              <div class="sprite3" >      
+              </div>
+              <h5> ACCESS COMPANY DATA </h5>  
+                </a>
+             </div>
+              <div class="xcenter col-md-2" style="background-color:#5da61f;">
+                 <a href="/rsp?id=rsp_status_now">
+              <div class="sprite4" >      
+              </div>
+              <h5> VIEW EXISTING CASES</h5> 
+                </a>
+             </div>
+          </div>  
+    </div>
+  
+  <div>
+    <img src="portal-landing-bottom.jpg" class="img-bottom" >
+  </div>
+  
+</div>
+
+]]></template>
+    </sp_widget>
+</record_update>
