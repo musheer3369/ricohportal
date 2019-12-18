@@ -22,7 +22,7 @@
 			{
 				return ["caller_id","number","opened_by","company","active",
 					 "state","short_description","contact_type",
-					 "parent_incident","sys_updated_on","opened_at","closed_at"];
+					 "parent_incident","sys_updated_on","opened_at","closed_at","u_sub_state","u_location","calendar_duration"];
 			}
 		else if(c.data.table == 'cmdb_ci_computer')
 			{
@@ -39,7 +39,7 @@
 		else if(c.data.table == 'sc_request'){
 			return ["caller_id","number","opened_by","company","active",
 					 "state","short_description","contact_type",
-					 "parent_incident","sys_updated_on","opened_at","closed_at"];
+					 "parent_incident","sys_updated_on","opened_at","closed_at","location"];
 		}
 	}
 
@@ -75,7 +75,7 @@
         <sys_created_on>2019-11-06 06:28:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cb91e800db8908106d7070e21f961919</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>RSP Incident SN Desktop Filter</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -83,7 +83,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_cb91e800db8908106d7070e21f961919</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-11-14 13:10:43</sys_updated_on>
+        <sys_updated_on>2019-12-17 15:38:33</sys_updated_on>
         <template><![CDATA[<div>
 	<sn-filter-widget uid="c.data.table" table="{{c.data.table}}" filter-config="c.config" />
 </div>]]></template>

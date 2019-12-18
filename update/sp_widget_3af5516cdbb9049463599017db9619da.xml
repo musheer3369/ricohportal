@@ -118,7 +118,7 @@ background: url('icons-its-portal.png') no-repeat -107px -275px;
         <sys_created_on>2019-12-15 06:21:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3af5516cdbb9049463599017db9619da</sys_id>
-        <sys_mod_count>357</sys_mod_count>
+        <sys_mod_count>358</sys_mod_count>
         <sys_name>RSP Landing Widget v2</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -126,7 +126,7 @@ background: url('icons-its-portal.png') no-repeat -107px -275px;
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_3af5516cdbb9049463599017db9619da</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-12-17 11:14:40</sys_updated_on>
+        <sys_updated_on>2019-12-17 15:48:48</sys_updated_on>
         <template><![CDATA[<div  >
 <!-- your widget template -->
   <div  class="img-top">
@@ -159,7 +159,7 @@ background: url('icons-its-portal.png') no-repeat -107px -275px;
                  <a href="/rsp?id=rsp_status_now">
               <div class="sprite4" >      
               </div>
-              <h5> VIEW EXISTING CASES</h5> 
+              <h5> VIEW EXISTING INCIDENTS AND REQUESTS</h5> 
                 </a>
              </div>
           </div>  
