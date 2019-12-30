@@ -6,91 +6,112 @@
   var c = this;
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>@media only screen and (max-width: 768px) {
-.xcontainer{
-	display: inline;
- 
-  margin-left:0%;
-  margin-right:0%;
-  margin-top:0%;
-}
-
-}
-
-@media only screen and (min-width: 768px) {
-.xcontainer{
-	display: flex;
-  justify-content: center;
-  margin-left:20%;
-  margin-right:20%;
- margin-top:-20%;
-  z-index:40;
-  position:relative;
-}
-}
-.xcenter {
-  width: 100%; 
-  color: black;
-  font-weight: bold;
-  font-family: Tahoma;
-  text-align:center;
-  padding:10px;
-}
-
-
-h5{
-color:white;
-  font-size:10px;
-}
-
-.img-top{
-  margin-top:-50px;  
-  height:auto;
-  width:100%;
-  z-index:30;
-  position:relative;
-  padding-bottom:20%;
-}
-
-.img-bottom{ 
-  z-index:20;  
- position:relative;
-  height:auto;
-  width:100%;
-}
-
-.sprite1 {    
-  background: url('icons-its-portal.png') no-repeat -756px -431px;  
-  border:none;
-  outline:none;	
-  margin-left:auto;margin-right:auto;
-  width: 56px;
-	height: 56px;
-}
-.sprite2 {
-	background: url('icons-its-portal.png') no-repeat -918px -107px;
-	width: 56px;
-	height: 56px;
-  border:none;
-  outline:none;	
-  margin-left:auto;margin-right:auto;
-}
-.sprite3 {
-background: url('icons-its-portal.png') no-repeat -107px -275px;
-	width: 56px;
-	height: 56px;
-  border:none;
-  outline:none;	
-  margin-left:auto;margin-right:auto;
-}
-
-.sprite4 {
-	background: url('icons-its-portal.png') no-repeat -513px -431px;
-	width: 56px;
-	height: 56px;
-  border:none;
-  outline:none;	
-  margin-left:auto;margin-right:auto;
+        <css>@media only screen and (max-width: 768px) {&#13;
+ &#13;
+.xcontainer{&#13;
+	display: inline;&#13;
+ &#13;
+  margin-left:0%;&#13;
+  margin-right:0%;&#13;
+  margin-top:0%;&#13;
+}&#13;
+  .img-top{&#13;
+  margin-top:-50px;  &#13;
+  height:auto;&#13;
+  width:100%;&#13;
+  z-index:30;&#13;
+  position:relative;&#13;
+  padding-bottom:0px;&#13;
+  }&#13;
+&#13;
+}&#13;
+&#13;
+@media only screen and (min-width: 768px) {&#13;
+  &#13;
+  .img-top{&#13;
+  margin-top:-50px;  &#13;
+  height:auto;&#13;
+  width:100%;&#13;
+  z-index:30;&#13;
+  position:relative;&#13;
+  padding-bottom:3%;&#13;
+}&#13;
+  .xcontainer{&#13;
+	display: flex;&#13;
+  justify-content: center;&#13;
+  margin-left:20%;&#13;
+  margin-right:20%;&#13;
+ margin-top:-3%;&#13;
+  z-index:40;&#13;
+  position:relative;&#13;
+   }&#13;
+}&#13;
+&#13;
+&#13;
+.xcenter {&#13;
+  width: 100%; &#13;
+  color: black;&#13;
+  font-weight: bold;&#13;
+  font-family: Tahoma;&#13;
+  text-align:center;&#13;
+  padding:10px;&#13;
+}&#13;
+.h2-title {&#13;
+  color:white;&#13;
+  font-family:'frutiger-bold';&#13;
+  font-size:2em;&#13;
+  position: absolute;&#13;
+  top: 10%;&#13;
+  left: 50%;&#13;
+  transform: translate(-50%, -50%);&#13;
+}&#13;
+&#13;
+h5{&#13;
+color:white;&#13;
+  font-size:10px;&#13;
+}&#13;
+&#13;
+&#13;
+&#13;
+.img-bottom{ &#13;
+  z-index:20;  &#13;
+ position:relative;&#13;
+  height:auto;&#13;
+  width:100%;&#13;
+}&#13;
+&#13;
+.sprite1 {    &#13;
+  background: url('icons-its-portal.png') no-repeat -756px -431px;  &#13;
+  border:none;&#13;
+  outline:none;	&#13;
+  margin-left:auto;margin-right:auto;&#13;
+  width: 56px;&#13;
+	height: 56px;&#13;
+}&#13;
+.sprite2 {&#13;
+	background: url('icons-its-portal.png') no-repeat -918px -107px;&#13;
+	width: 56px;&#13;
+	height: 56px;&#13;
+  border:none;&#13;
+  outline:none;	&#13;
+  margin-left:auto;margin-right:auto;&#13;
+}&#13;
+.sprite3 {&#13;
+background: url('icons-its-portal.png') no-repeat -107px -275px;&#13;
+	width: 56px;&#13;
+	height: 56px;&#13;
+  border:none;&#13;
+  outline:none;	&#13;
+  margin-left:auto;margin-right:auto;&#13;
+}&#13;
+&#13;
+.sprite4 {&#13;
+	background: url('icons-its-portal.png') no-repeat -513px -431px;&#13;
+	width: 56px;&#13;
+	height: 56px;&#13;
+  border:none;&#13;
+  outline:none;	&#13;
+  margin-left:auto;margin-right:auto;&#13;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -118,7 +139,7 @@ background: url('icons-its-portal.png') no-repeat -107px -275px;
         <sys_created_on>2019-12-15 06:21:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3af5516cdbb9049463599017db9619da</sys_id>
-        <sys_mod_count>358</sys_mod_count>
+        <sys_mod_count>378</sys_mod_count>
         <sys_name>RSP Landing Widget v2</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -126,10 +147,11 @@ background: url('icons-its-portal.png') no-repeat -107px -275px;
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_3af5516cdbb9049463599017db9619da</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-12-17 15:48:48</sys_updated_on>
+        <sys_updated_on>2019-12-30 06:45:20</sys_updated_on>
         <template><![CDATA[<div  >
 <!-- your widget template -->
   <div  class="img-top">
+   <div class="h2-title">IT Services Portal</div>
     <img src="portal-landing-top.jpg"  style="width:100%;">       
    
            <div class="xcontainer row">

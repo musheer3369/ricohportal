@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css">
     <sp_css action="INSERT_OR_UPDATE">
         <css>@font-face{&#13;
-  font-family:'frutiger-italic';&#13;
-   src: url('/sys_attachment.do?sysparm_referring_url=tear_off&amp;view=true&amp;sys_id=c29ea4e1db7d04146d7070e21f96194d');&#13;
-   font-weight: normal;&#13;
-   font-style: normal;&#13;
-&#13;
-}&#13;
-@font-face{&#13;
   font-family:'frutiger-bold';&#13;
-   src: url('/sys_attachment.do?sysparm_referring_url=tear_off&amp;view=true&amp;sys_id=debeec29db7d04146d7070e21f961938');&#13;
+   src: url('/sys_attachment.do?sysparm_referring_url=tear_off&amp;view=true&amp;sys_id=8df5b975dbb5405063599017db96199e');&#13;
    font-weight: normal;&#13;
    font-style: normal;&#13;
 &#13;
@@ -22,7 +15,7 @@
         <sys_created_on>2019-12-18 06:06:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>310f60eddb7d04146d7070e21f96194e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Portal Frutiger font</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -30,6 +23,6 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_css_310f60eddb7d04146d7070e21f96194e</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-12-18 06:10:27</sys_updated_on>
+        <sys_updated_on>2019-12-19 05:53:54</sys_updated_on>
     </sp_css>
 </record_update>
