@@ -138,7 +138,7 @@ data.pageURI = util.getPageUri();]]></script>
         <sys_created_on>2019-12-27 05:30:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>069d3a5cdb4244506d7070e21f9619c9</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>Ricoh Login</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -146,8 +146,8 @@ data.pageURI = util.getPageUri();]]></script>
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_069d3a5cdb4244506d7070e21f9619c9</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-12-30 05:53:55</sys_updated_on>
-        <template><![CDATA[<div ng-if="!data.is_logged_in">
+        <sys_updated_on>2020-01-06 03:12:37</sys_updated_on>
+        <template><![CDATA[<div ng-if="!data.is_logged_in" style="display:flex">
   <form ng-if="!c.externalLoginMode && !c.firstTimeMode" class="form-signin" ng-submit="c.login(c.username, c.password)" method="post">
     <div ng-class="{'panel panel-default': c.options.show_panel}">
       <div ng-if="c.options.show_panel" class="panel-heading">
@@ -155,7 +155,9 @@ data.pageURI = util.getPageUri();]]></script>
 	<a ng-class="{'header-brand-logo':portal.logo}" href="?id={{portal.homepage_dv}}">
 		<span ng-if="!portal.logo" class="inverse">{{portal.title}}</span>
      
+      
 		<img  src="ricoh-logo-grey.jpg" width="150" height="50" alt="" />
+      <img src="mst-ricoh.png" width="120" height="30"/>
 	</a>
 </div>
         <div class="panel-title">
@@ -189,7 +191,7 @@ data.pageURI = util.getPageUri();]]></script>
           ${Login}
         </button>
         
-        <a ng-if="data.multisso_enabled"
+        <a 
            class="set-login-type-link"
            href="javascript:void(0)"
            ng-click="c.setFirstTime(true)">${Reset Password}</a>
