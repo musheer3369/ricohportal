@@ -2,9 +2,9 @@
     <sp_column action="INSERT_OR_UPDATE">
         <class_name/>
         <order>1</order>
-        <size>3</size>
+        <size/>
         <size_lg/>
-        <size_sm>3</size_sm>
+        <size_sm/>
         <size_xs/>
         <sp_row display_value="2">f8187298db4244506d7070e21f9619cd</sp_row>
         <sys_class_name>sp_column</sys_class_name>
@@ -12,7 +12,7 @@
         <sys_created_on>2019-12-27 05:06:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>34187298db4244506d7070e21f9619cf</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>1</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -20,6 +20,6 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_column_34187298db4244506d7070e21f9619cf</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-12-27 06:14:29</sys_updated_on>
+        <sys_updated_on>2020-01-09 06:08:50</sys_updated_on>
     </sp_column>
 </record_update>

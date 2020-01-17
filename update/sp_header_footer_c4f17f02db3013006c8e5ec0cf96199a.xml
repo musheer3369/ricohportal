@@ -12,36 +12,35 @@
 	});
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>
-
-.xvnavbar-nav {
-   
-    text-align: center;
-    &gt; li {
-      float: none;
-      display: inline-block;
-    }
-  }
-
-
-.navbar-toggle.pull-left {
-  margin-left: 15px;
-}
-@media (min-width: 768px) {
-  .pull-sm-left {
-    float: left !important;
-  }
-}
-
-.btn-chat{
-	//background-color:#CF142B;
-    color:black !important;
-}
-.header-loader{ 
- 
-	width:50px;
- 
-    top:24px;
+        <css>.xvnavbar-nav {&#13;
+   &#13;
+    text-align: center;&#13;
+    &gt; li {&#13;
+      float: none;&#13;
+      display: inline-block;&#13;
+    }&#13;
+  }&#13;
+&#13;
+&#13;
+.navbar-toggle.pull-left {&#13;
+  margin-left: 15px;&#13;
+}&#13;
+@media (min-width: 768px) {&#13;
+  .pull-sm-left {&#13;
+   &#13;
+ float: left !important;&#13;
+  }&#13;
+}&#13;
+&#13;
+.btn-chat{&#13;
+	//background-color:#CF142B;&#13;
+    color:black !important;&#13;
+}&#13;
+.header-loader{ &#13;
+ &#13;
+	width:50px;&#13;
+ &#13;
+    top:24px;&#13;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -86,7 +85,7 @@
         <sys_created_on>2018-03-14 03:56:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c4f17f02db3013006c8e5ec0cf96199a</sys_id>
-        <sys_mod_count>181</sys_mod_count>
+        <sys_mod_count>187</sys_mod_count>
         <sys_name>RSP Header</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -94,7 +93,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_header_footer_c4f17f02db3013006c8e5ec0cf96199a</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-12-19 07:50:16</sys_updated_on>
+        <sys_updated_on>2020-01-09 06:15:58</sys_updated_on>
         <template><![CDATA[<div class="white-backdrop">
   <div class="container-fluid">
     <div  style="display:flex;justify-content:space-between"  >     
