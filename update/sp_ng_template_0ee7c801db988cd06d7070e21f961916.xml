@@ -7,7 +7,7 @@
         <sys_created_on>2019-10-03 00:23:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0ee7c801db988cd06d7070e21f961916</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>tmpMySurveys</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -15,12 +15,12 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_ng_template_0ee7c801db988cd06d7070e21f961916</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-03 00:25:46</sys_updated_on>
+        <sys_updated_on>2020-01-18 06:33:12</sys_updated_on>
         <template><![CDATA[<div class="media">
   	<div class="media-body" style="background-color:#f3f3f3;padding:15px">
       <h5 class="media-heading">View Surveys</h5>
      
-     <h3> <a ng-href="/rsp?id=rsp_surveys">
+     <h3> <a ng-href="?id=rsp_surveys">
        <span class="label label-default" style="background-color:#4e92ab;">Surveys</span></a></h3>
       
     </div>

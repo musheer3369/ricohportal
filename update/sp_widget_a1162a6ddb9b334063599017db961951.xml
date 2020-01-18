@@ -50,7 +50,7 @@ div{
         <sys_created_on>2019-08-16 08:08:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a1162a6ddb9b334063599017db961951</sys_id>
-        <sys_mod_count>66</sys_mod_count>
+        <sys_mod_count>67</sys_mod_count>
         <sys_name>RSP Managed Services</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -58,10 +58,10 @@ div{
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_a1162a6ddb9b334063599017db961951</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-11-26 12:14:28</sys_updated_on>
+        <sys_updated_on>2020-01-18 06:24:47</sys_updated_on>
         <template><![CDATA[ 
   
- <h3> <a href="https://ricohusadev.service-now.com/rsp?id=rsp_request_form&sys_id=814e4f6edb133e806d7070e21f96192d&sysparm_category=262c56bddbe222005524fbec0f961916"><u>Click Here</u></a> to request more information on any of these services. </h3>
+ <h3> <a href="?id=rsp_request_form&sys_id=814e4f6edb133e806d7070e21f96192d&sysparm_category=262c56bddbe222005524fbec0f961916"><u>Click Here</u></a> to request more information on any of these services. </h3>
 <div class="row text-center" >
   <div class="col-md-2" >
     	<div  style="background-image:url(it_services_bkg.png);min-height:275px">
