@@ -46,7 +46,7 @@ color:#CF142B;&#13;
         <sys_created_on>2019-10-31 04:50:07</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a5a15986db7c04506d7070e21f961980</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name> RSP reports data</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -54,13 +54,13 @@ color:#CF142B;&#13;
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_a5a15986db7c04506d7070e21f961980</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-12-09 05:15:45</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:01:50</sys_updated_on>
         <template><![CDATA[<div class="row">
 
 <div class="col-md-4 ">
   
  
-       <a href="{{data.urlPrefix}}rsp?id=pr_lm_charts_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}"  target="_blank">
+       <a href="?id=pr_lm_charts_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}"  target="_blank">
    <span class="fa fa-stack fa-1x icon-menuButton" >
          <i class="fa fa-square fa-stack-2x"></i>
          <i class="fa fa-lastfm fa-stack-1x fa-inverse" 
@@ -70,7 +70,7 @@ color:#CF142B;&#13;
 </div>
 
 <div class="col-md-4">
-  <a href="{{data.urlPrefix}}rsp/?id=pr_solarwindsserver_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+  <a href="?id=pr_solarwindsserver_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
 <span class="fa fa-stack fa-1x icon-menuButton">
          <i class="fa fa-square fa-stack-2x"></i>
          <i class="fa fa-laptop fa-stack-1x fa-inverse"  rel="tooltip" title="Server Utilization" aria-hidden="true" ></i>
@@ -78,7 +78,7 @@ color:#CF142B;&#13;
   </a>
 </div>
 <div class="col-md-4">
-  <a href="{{data.urlPrefix}}rsp/?id=pr_solarwindswan_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+  <a href="?id=pr_solarwindswan_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
   <span class="fa fa-stack fa-1x icon-menuButton">
          <i class="fa fa-square fa-stack-2x"></i>
          <i class="fa fa-cubes fa-stack-1x fa-inverse"  rel="tooltip" title="WAN Utilization"  aria-hidden="true"></i>
@@ -91,7 +91,7 @@ color:#CF142B;&#13;
 
 <div class="row">
 <div class="col-md-4">
-  <a href="{{data.urlPrefix}}rsp/?id=pr_evault_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+  <a href="?id=pr_evault_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
    <span class="fa fa-stack fa-1x icon-menuButton">
          <i class="fa fa-square fa-stack-2x"></i>
          <i class="fa fa-history fa-stack-1x fa-inverse"  rel="tooltip" title="Server Backup Status" aria-hidden="true"></i>
@@ -103,7 +103,7 @@ color:#CF142B;&#13;
 
 
 <div class="col-md-4">
-  <a href="{{data.urlPrefix}}rsp/?id=pr_connected_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+  <a href="?id=pr_connected_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
    <span class="fa fa-stack fa-1x icon-menuButton">
          <i class="fa fa-square fa-stack-2x"></i>
          <i class="fa fa-shield fa-stack-1x fa-inverse"  rel="tooltip" title="Workstation Backup Status"  aria-hidden="true"></i>
@@ -113,7 +113,7 @@ color:#CF142B;&#13;
 
 
   <div id='li_evaultApp' class="col-md-4" ng-if="data.isItilUser">
-	<a href="{{data.urlPrefix}}rsp/?id=pr_evaultapp_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+	<a href="?id=pr_evaultapp_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
     <span class="fa fa-stack fa-1x icon-menuButton">
          <i class="fa fa-square fa-stack-2x"></i>
          <i class="fa fa-calculator fa-stack-1x fa-inverse"  rel="tooltip" title="EvaultApp" aria-hidden="true"></i>
@@ -122,7 +122,7 @@ color:#CF142B;&#13;
       </div>
   
 <div id='li_evaultCaseMgmt' class="col-md-4" ng-if="data.isItilUser">
-  <a href="{{data.urlPrefix}}rsp/?id=pr_evaultcasemgmt_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+  <a href="?id=pr_evaultcasemgmt_new&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
          <span class="fa fa-stack fa-1x icon-menuButton">
          <i class="fa fa-square fa-stack-2x"></i>
          <i class="fa fa-check-square-o fa-stack-1x fa-inverse"  rel="tooltip" title="Evault Case Management"  aria-hidden="true"></i>            
@@ -131,7 +131,7 @@ color:#CF142B;&#13;
 </div>
 
       <div id='li_commvaultCaseMgmt' class="col-md-4" ng-if="data.isItilUser">
-		<a href="{{data.urlPrefix}}rsp/?id=pr_commvaultcasemanagement&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
+		<a href="?id=pr_commvaultcasemanagement&sysparm_domain_restore=false&sysparm_stack=no&currentCompanyId={{data.companyId}}" target="_blank">
          <span class="fa fa-stack fa-1x icon-menuButton">
          <i class="fa fa-square fa-stack-2x"></i>
          <i class="fa fa-key fa-stack-1x fa-inverse" id='CommvaultCaseMgmt' rel="tooltip" title="Commvault Backup Status" aria-hidden="true"></i>
