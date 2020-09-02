@@ -3,6 +3,7 @@
         <active>true</active>
         <can_edit_in_studio>false</can_edit_in_studio>
         <enforce_license>log</enforce_license>
+        <guided_setup_guid/>
         <js_level>helsinki_es5</js_level>
         <licensable>true</licensable>
         <license_category/>
@@ -24,14 +25,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-03-13 05:59:38</sys_created_on>
         <sys_id>cf644ff9db3013006c8e5ec0cf96193a</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-07-24 15:36:34</sys_updated_on>
+        <sys_updated_on>2020-09-02 16:25:38</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </sys_app>
 </record_update>

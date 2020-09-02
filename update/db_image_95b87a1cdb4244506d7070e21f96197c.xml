@@ -30,6 +30,7 @@
         <compressed>true</compressed>
         <content_type>image/jpeg</content_type>
         <file_name>image</file_name>
+        <hash/>
         <image_height>1200</image_height>
         <image_width>2244</image_width>
         <size_bytes>247351</size_bytes>

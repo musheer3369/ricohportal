@@ -6,7 +6,8 @@
   var c = this;		
   
 	$scope.loadingIndicator=$rootScope.loadingIndicator;
-
+		$scope.docLoc = encodeURI(document.location);
+		$scope.userID = $scope.user.sys_id;
 	$scope.$on('sp_loading_indicator',function(e,value){
 		$scope.loadingIndicator=value;
 	});
@@ -85,7 +86,7 @@
         <sys_created_on>2018-03-14 03:56:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c4f17f02db3013006c8e5ec0cf96199a</sys_id>
-        <sys_mod_count>187</sys_mod_count>
+        <sys_mod_count>189</sys_mod_count>
         <sys_name>RSP Header</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -93,7 +94,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_header_footer_c4f17f02db3013006c8e5ec0cf96199a</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2020-01-09 06:15:58</sys_updated_on>
+        <sys_updated_on>2020-06-09 16:42:48</sys_updated_on>
         <template><![CDATA[<div class="white-backdrop">
   <div class="container-fluid">
     <div  style="display:flex;justify-content:space-between"  >     
@@ -121,7 +122,7 @@
           								<b>Chat Now</b></a>
               
                 </span>
-             <img src="mst-ricoh.png" width="120" height="30"/>
+         <!--    <img src="mst-ricoh.png" width="120" height="30"/>-->
             </div>
       </div>
     </div>

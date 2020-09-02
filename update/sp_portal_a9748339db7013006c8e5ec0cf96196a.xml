@@ -31,18 +31,19 @@ width:0px !important;&#13;
         <sys_created_on>2018-03-13 06:00:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a9748339db7013006c8e5ec0cf96196a</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Ricoh Service Portal.</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_portal_a9748339db7013006c8e5ec0cf96196a</sys_update_name>
-        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-12-27 05:13:10</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-05-09 02:51:08</sys_updated_on>
         <theme display_value="Ricoh Theme">3a33774adb3013006c8e5ec0cf9619fa</theme>
         <title>Ricoh Service Portal.</title>
-        <url_suffix>rsp</url_suffix>
+        <ts_index_group display_value="portal_index_group">2c3e7d1513c93300e618bfd63244b0d7</ts_index_group>
+        <url_suffix>ms</url_suffix>
     </sp_portal>
     <sys_translated_text action="delete_multiple" query="documentkey=a9748339db7013006c8e5ec0cf96196a"/>
     <sys_attachment action="INSERT_OR_UPDATE">
@@ -51,6 +52,7 @@ width:0px !important;&#13;
         <compressed>true</compressed>
         <content_type>image/gif</content_type>
         <file_name>logo</file_name>
+        <hash/>
         <image_height>62</image_height>
         <image_width>160</image_width>
         <size_bytes>3541</size_bytes>

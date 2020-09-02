@@ -30,19 +30,20 @@
         <compressed>true</compressed>
         <content_type>image/svg+xml</content_type>
         <file_name>image</file_name>
+        <hash/>
         <image_height/>
         <image_width/>
         <size_bytes>3335</size_bytes>
         <size_compressed>443</size_compressed>
-        <state/>
+        <state>available</state>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
         <sys_created_on>2019-10-02 23:37:02</sys_created_on>
         <sys_domain>774190f01f1310005a3637b8ec8b70ef</sys_domain>
         <sys_domain_path>!!!/</sys_domain_path>
         <sys_id>ce7d73b0db588cd06d7070e21f9619b0</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-02 23:37:02</sys_updated_on>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2020-05-09 14:26:33</sys_updated_on>
         <table_name>ZZ_YYdb_image</table_name>
         <table_sys_id>815d73b0db588cd06d7070e21f9619ab</table_sys_id>
     </sys_attachment>

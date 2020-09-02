@@ -85,10 +85,10 @@ gr.setValue('resolved_by', gs.getUserID());
 gr.setValue('close_notes',"Closed by caller with comment: "+ input.resolveComments);
 gr.update();
 
-	gr.setValue('incident_state',7);
-	gr.setValue('state',7);
-	gr.setValue('closed_by',gs.getUserID());
-	gr.update();
+	//gr.setValue('incident_state',7);
+	//gr.setValue('state',7);
+	//gr.setValue('closed_by',gs.getUserID());
+	//gr.update();
 	
 //data.response1 = gs.getMessage('Incident '+gr.number+' was resolved');
 }
@@ -101,7 +101,7 @@ gr.update();
         <sys_created_on>2019-09-30 15:01:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>37347b8cdb1c08d06d7070e21f9619f5</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>RSP Resolve Incident</sys_name>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
         <sys_policy/>
@@ -109,7 +109,7 @@ gr.update();
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>sp_widget_37347b8cdb1c08d06d7070e21f9619f5</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-06 14:33:08</sys_updated_on>
+        <sys_updated_on>2020-03-20 15:38:35</sys_updated_on>
         <template><![CDATA[<div style="float:left">
 <button type="button" class="btn btn-success" 
          ng-click="c.openModalResolve()"

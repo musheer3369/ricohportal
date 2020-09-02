@@ -21,7 +21,23 @@
    //Type appropriate comment here, and begin script below
 	
      g_form.clearOptions('my_sys_class_name'); // Removes all options  
-      
+      	var ajaxAssignmentGroup = new GlideAjax('rsp_ci_helper');
+	ajaxAssignmentGroup.addParam('sysparm_name', 'getAssignmentGroup');
+	ajaxAssignmentGroup.addParam('company',g_form.getValue('company'));
+	ajaxAssignmentGroup.getXML(setAssignmentGroup);
+	
+	function setAssignmentGroup(response){
+		
+		try{
+			 var answer = response.responseXML.documentElement.getAttribute("answer");
+			console.log("ANSWER:" + answer);
+		         answer=answer.toString();	
+			g_form.setValue('assignment_group',answer);
+		}
+		catch(e){
+			console.error("Error setting the assignment Group");
+		}
+	}
     var ga=new GlideAjax('rsp_ci_helper');
 	ga.addParam('sysparm_name', 'getCiClassCategories');
 	ga.addParam('company',g_form.getValue('company'));
@@ -57,7 +73,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>439f9cb3db4e13006c8e5ec0cf96196e</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>CiClassOptions</sys_name>
         <sys_overrides/>
         <sys_package display_value="Ricoh Portal " source="x_90620_rp">cf644ff9db3013006c8e5ec0cf96193a</sys_package>
@@ -66,7 +82,7 @@
         <sys_scope display_value="Ricoh Portal ">cf644ff9db3013006c8e5ec0cf96193a</sys_scope>
         <sys_update_name>catalog_script_client_439f9cb3db4e13006c8e5ec0cf96196e</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2019-10-08 05:54:06</sys_updated_on>
+        <sys_updated_on>2020-01-22 05:54:37</sys_updated_on>
         <table/>
         <type>onLoad</type>
         <ui_type>10</ui_type>
